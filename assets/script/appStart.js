@@ -2,6 +2,8 @@ function init(){
     cc.tool = {}
     var viewManager = require("viewManager");
     cc.tool.viewManager = new viewManager();
+    // cc.tool.viewManager.init();
+    cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
 
     // cc.variable = {};
     // var array1 = require("array1");

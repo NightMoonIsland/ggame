@@ -14,6 +14,7 @@ cc.Class({
         // ...
         list: [],
         size: 0,
+        npos: -1,
     },
     // use this for initialization
     onLoad: function () {
@@ -35,6 +36,24 @@ cc.Class({
     pushBack: function(data) {
         this.list[this.size] = data;
         this.size = this.size + 1;
+    },
+
+    find: function(value){
+        var index = this.npos;
+        if (type(value) == "function"){
+            for(i = 0; i < this.size; i++){
+                
+            }
+        }
+        else{
+            for(i = 0; i < this.size; i++){
+                if(this.list[i] == value){
+                    index = i;
+                    break;
+                }
+            }
+        }
+        return index;
     },
 
     clear: function(){

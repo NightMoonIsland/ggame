@@ -15,6 +15,7 @@ cc.Class({
         // },
         // ...
         array1: null,
+        viewList: [],
     },
 
     ctor: function() {
@@ -25,6 +26,7 @@ cc.Class({
         this.array1.status();
         this.array1.pushBack({a:1, b:2});
         this.array1.status();
+        
     },
     // use this for initialization
     onLoad: function () {
@@ -41,10 +43,25 @@ cc.Class({
 
     init: function(){
         this.viewList = [];
+        console.log("to this 1");
+        this.viewList["haha"] = {a:1, b:2};
+        console.log("to this 2");
+    },
+
+    registView(viewName, module, title){
+        this.viewList[viewName] = {viewName:viewName, module:module, title:title};
+
+        var viewInfo = this.viewList[viewName];
+        this.viewList[0] = "hahah";
+        this.viewList[1] = "wocao";
+        console.log(viewInfo);
+        console.log(this.viewList.length);
     },
 
     changeView: function(viewName){
-
+        this.view = cc.loader.loadRes("");
+        
+        return this.view;
     },
 
     backPreview: function(){

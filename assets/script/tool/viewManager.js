@@ -16,6 +16,7 @@ cc.Class({
         // ...
         array1: null,
         viewList: [],
+        root: cc.Node,
     },
 
     ctor: function() {
@@ -28,6 +29,11 @@ cc.Class({
         this.array1.status();
         
     },
+
+    setRoot: function(node) {
+        this.root = node;
+    },
+
     // use this for initialization
     onLoad: function () {
         // console.log("hahahahha");
@@ -59,9 +65,25 @@ cc.Class({
     },
 
     changeView: function(viewName){
-        this.view = cc.loader.loadRes("");
+        var idx = this.array1.find(viewName);
+        if(idx != this.array1.npos){
+
+        }
+        else{
+
+        }
+
+        //通过链接 加载的资源 必须放在resource下
+        cc.loader.loadRes("prefab/Test1Panel", function(err, prefab){
+            var root = cc.instantiate(prefab);
+            cc.director.getScene().getChildByName("Canvas").addChild(root);
+        });
         
-        return this.view;
+        return this.root;
+    },
+
+    testAddChild: function(){
+
     },
 
     backPreview: function(){

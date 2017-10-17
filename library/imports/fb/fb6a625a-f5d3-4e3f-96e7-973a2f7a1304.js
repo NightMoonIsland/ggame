@@ -1,6 +1,6 @@
 "use strict";
 cc._RF.push(module, 'fb6a6Ja9dNOP5bnlzovehME', 'array1');
-// script/tool/array1.js
+// script/library/array1.js
 
 "use strict";
 
@@ -90,16 +90,16 @@ cc.Class({
         return this.size;
     },
 
+    empty: function empty() {
+        return this.size == 0;
+    },
+
     outPut: function outPut() {
         for (i = 0; i < this.size; i++) {
             console.log("element" + i + " = " + this.list[i]);
         }console.log("element size = " + this.size);
     }
 
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 });
 
 cc._RF.pop();

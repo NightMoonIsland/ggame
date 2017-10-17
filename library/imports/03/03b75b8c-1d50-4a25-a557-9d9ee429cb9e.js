@@ -66,6 +66,10 @@ cc.Class({
     initScene: function initScene() {
         cc.tool.viewManager.setRoot(this.node);
         cc.tool.viewManager.changeView("hahhahahaa");
+    },
+
+    testRemove: function testRemove() {
+        cc.tool.viewManager.curView();
     }
 
 });

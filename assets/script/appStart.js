@@ -60,6 +60,10 @@ cc.Class({
         cc.tool.viewManager.changeView("hahhahahaa");
     },
 
+    testRemove: function() {
+        cc.tool.viewManager.curView();
+    },
+
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

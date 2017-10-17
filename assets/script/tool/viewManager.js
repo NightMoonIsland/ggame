@@ -72,14 +72,20 @@ cc.Class({
         else{
 
         }
-
+        var self = this;
         //通过链接 加载的资源 必须放在resource下
         cc.loader.loadRes("prefab/Test1Panel", function(err, prefab){
             var root = cc.instantiate(prefab);
+            self.root = root;
             cc.director.getScene().getChildByName("Canvas").addChild(root);
         });
         
         return this.root;
+    },
+
+    curView: function() {
+        this.root.removeFromParent(false);
+        // cc.loader.releaseRes("prefab/Test1Panel");
     },
 
     testAddChild: function(){

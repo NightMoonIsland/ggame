@@ -86,11 +86,15 @@ cc.Class({
         return this.size;
     },
 
+    empty: function() {
+        return this.size == 0;
+    },
+
     outPut: function() {
         for(i = 0; i < this.size; i++)
             console.log("element" + i + " = " + this.list[i]);
         console.log("element size = " + this.size);
-    }
+    },
 
 
 

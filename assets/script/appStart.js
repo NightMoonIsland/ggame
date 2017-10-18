@@ -1,10 +1,17 @@
 function init(){
     cc.tool = {}
     var viewManager = require("viewManager");
-    console.log("wocao nima");
-    require("viewRegister");
     cc.tool.viewManager = new viewManager();
     cc.tool.viewManager.init();
+
+    require("viewRegister");
+
+    var eventManager = require("eventManager");
+    cc.tool.eventManager = new eventManager();
+
+
+    cc.tool.Lang = require("langZh");
+    console.log(cc.tool.Lang["ITEM_VALUE"]);
     // cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
 
     var haha = [];
@@ -46,6 +53,7 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        haha: [],
     },
 
     // use this for initialization
@@ -56,12 +64,18 @@ cc.Class({
     },
 
     initScene: function() {
-        cc.tool.viewManager.setRoot(this.node);
-        cc.tool.viewManager.changeView("hahhahahaa");
+        // cc.tool.viewManager.setRoot(this.node);
+        // cc.tool.viewManager.changeView("hahhahahaa");
+        console.log("test type" + typeof this.haha["wocao"]);
     },
 
     testRemove: function() {
+        var test = require("eventManager")
+        var haha = new test();
+        haha.init();
         cc.tool.viewManager.curView();
+        // var test = require("eventManager")
+        // var haha = new test();
     },
 
     // called every frame, uncomment this function to activate update callback

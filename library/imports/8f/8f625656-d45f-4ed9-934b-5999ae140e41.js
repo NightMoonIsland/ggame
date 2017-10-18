@@ -4,6 +4,8 @@ cc._RF.push(module, '8f625ZW1F9O2ZNLWZmuFA5B', 'viewRegister');
 
 "use strict";
 
-console.log("heheahhaha");
+console.log("heheahhaha 测试全局用法");
+
+module.exports = null;
 
 cc._RF.pop();

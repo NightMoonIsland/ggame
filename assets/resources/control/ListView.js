@@ -12,10 +12,18 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+
+        testList: {
+            default: null,
+            type: cc.ScrollView
+        },
+    },
+
+    ctor: function() {
+        this.updateTimer = 0;
     },
 
     create: function() {
-        
     },
 
     ctor: function() {
@@ -27,7 +35,18 @@ cc.Class({
 
     },
 
+    setItemModel: function() {
 
+    },
+
+    setDataProvider: function() {
+
+    },
+
+    update (dt) {
+        this.updateTimer += dt;
+        if(this.updateTimer < this.updateInterval) return;
+    },
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

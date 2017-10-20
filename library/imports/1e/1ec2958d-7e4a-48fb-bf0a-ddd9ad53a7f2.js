@@ -11,7 +11,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var array1 = require("array1");
 
 cc.Class((_cc$Class = {
-    extends: cc.Layout,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -98,10 +98,7 @@ cc.Class((_cc$Class = {
         this.node.height = dl.getSize() * (this.itemHeight + this.hgap) - this.hgap;
         this.node.width = this.width;
     } else {
-        this.calcSection = function (self) {
-            if (!self.dp || self.dp.size() == 0) {}
-            var interval = self.itemHeight + self.vgap;
-        };
+        this.node.height = this.height;
     }
 
     dl.excuteWithFunc(function (data, index) {

@@ -186,7 +186,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 240,
-      "height": 100
+      "height": 500
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -908,28 +908,6 @@
       "__id__": 3
     },
     "_enabled": true,
-    "_layoutSize": {
-      "__type__": "cc.Size",
-      "width": 300,
-      "height": 200
-    },
-    "_resize": 0,
-    "_N$layoutType": 0,
-    "_N$padding": 0,
-    "_N$cellSize": {
-      "__type__": "cc.Size",
-      "width": 40,
-      "height": 40
-    },
-    "_N$startAxis": 0,
-    "_N$paddingLeft": 0,
-    "_N$paddingRight": 0,
-    "_N$paddingTop": 0,
-    "_N$paddingBottom": 0,
-    "_N$spacingX": 0,
-    "_N$spacingY": 0,
-    "_N$verticalDirection": 1,
-    "_N$horizontalDirection": 0,
     "scrollView": {
       "__id__": 29
     },
@@ -958,7 +936,7 @@
     },
     "horizontal": false,
     "vertical": true,
-    "inertia": true,
+    "inertia": false,
     "brake": 0.75,
     "elastic": true,
     "bounceDuration": 0.23,

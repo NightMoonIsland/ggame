@@ -3214,3 +3214,284 @@ Class ID: "1ec29WNfkpI+78K3dmtU6fy"
 2017-10-20T07:41:56.481Z - normal: Simulator: jsbindings: finalizing JS object 0x15e42b50 (SocketIO)
 2017-10-20T07:41:56.481Z - normal: Simulator: basic_object_finalize 0x15e42be0 ...
 2017-10-20T07:41:56.481Z - normal: Simulator: basic_object_finalize 0x15e42e80 ...
+2017-10-20T08:15:56.351Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 970.00
+2017-10-20T08:15:56.352Z - normal: Simulator: FRAME SCALE = 1.00
+2017-10-20T08:15:56.357Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2017-10-20T08:15:56.510Z - normal: Simulator: 
+2017-10-20T08:15:56.510Z - normal: Simulator: {
+2017-10-20T08:15:56.510Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2017-10-20T08:15:56.510Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2017-10-20T08:15:56.524Z - normal: Simulator: 	cocos2d.x.version: 1.5.2
+2017-10-20T08:15:56.525Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
+2017-10-20T08:15:56.525Z - normal: Simulator: 	gl.supports_PVRTC: false
+2017-10-20T08:15:56.525Z - normal: Simulator: 	gl.renderer: NVIDIA GeForce GTX 650 OpenGL Engine
+2017-10-20T08:15:56.525Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2017-10-20T08:15:56.525Z - normal: Simulator: 	gl.max_texture_size: 16384
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.supports_ETC1: false
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2017-10-20T08:15:56.526Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.max_texture_units: 16
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2017-10-20T08:15:56.526Z - normal: Simulator: 	gl.supports_NPOT: true
+2017-10-20T08:15:56.527Z - normal: Simulator: 	gl.version: 2.1 NVIDIA-10.17.34 367.15.10.45f01
+2017-10-20T08:15:56.527Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2017-10-20T08:15:56.527Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2017-10-20T08:15:56.527Z - normal: Simulator: }
+2017-10-20T08:15:56.527Z - normal: Simulator: 
+2017-10-20T08:15:56.527Z - normal: Simulator: 
+2017-10-20T08:15:56.527Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2017-10-20T08:15:56.530Z - normal: Simulator: Project Config:
+2017-10-20T08:15:56.530Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2017-10-20T08:15:56.530Z - normal: Simulator:     writable path: $(PROJDIR)/
+2017-10-20T08:15:56.530Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2017-10-20T08:15:56.531Z - normal: Simulator:     frame size: 960 x 640
+2017-10-20T08:15:56.531Z - normal: Simulator:     frame scale: 1.00
+2017-10-20T08:15:56.531Z - normal: Simulator:     show console: NO
+2017-10-20T08:15:56.531Z - normal: Simulator:     write debug log: NO ()
+2017-10-20T08:15:56.531Z - normal: Simulator:     listen: 
+2017-10-20T08:15:56.531Z - normal: Simulator:     debugger: none
+2017-10-20T08:15:56.532Z - normal: Simulator:     add searching path:
+2017-10-20T08:15:56.532Z - normal: Simulator: 
+2017-10-20T08:15:56.532Z - normal: Simulator: 
+2017-10-20T08:15:56.532Z - normal: Simulator: 
+2017-10-20T08:15:56.532Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:15:56.533Z - normal: Simulator: LOAD Js FILE: main.js
+2017-10-20T08:15:56.533Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:15:56.655Z - normal: Simulator: Cocos2d-x-lite v1.5.2
+2017-10-20T08:15:56.798Z - normal: Simulator: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/src/jsb_polyfill.js:34921:mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+2017-10-20T08:15:56.812Z - normal: Simulator: heheahhaha 测试全局用法
+2017-10-20T08:15:56.813Z - normal: Simulator: iShow!
+2017-10-20T08:15:56.955Z - normal: Simulator: hahahahhsfassaga
+2017-10-20T08:15:56.955Z - normal: Simulator: hhhehehe
+2017-10-20T08:15:56.956Z - normal: Simulator: self.size1
+2017-10-20T08:15:56.956Z - normal: Simulator: 0
+2017-10-20T08:15:56.956Z - normal: Simulator: self.size2
+2017-10-20T08:15:56.956Z - normal: Simulator: self.size1
+2017-10-20T08:15:56.956Z - normal: Simulator: 1
+2017-10-20T08:15:56.957Z - normal: Simulator: self.size2
+2017-10-20T08:15:56.957Z - normal: Simulator: to this 1
+2017-10-20T08:15:56.957Z - normal: Simulator: to this 2
+2017-10-20T08:15:56.957Z - normal: Simulator: 变成中文的情况
+2017-10-20T08:15:56.957Z - normal: Simulator: config = 1
+2017-10-20T08:15:56.957Z - normal: Simulator: wo de fak
+2017-10-20T08:15:56.957Z - normal: Simulator: 5
+2017-10-20T08:15:56.958Z - normal: Simulator: number
+2017-10-20T08:15:56.958Z - normal: Simulator: number
+2017-10-20T08:15:56.958Z - normal: Simulator: undefined
+2017-10-20T08:15:56.958Z - normal: Simulator: number
+2017-10-20T08:15:56.958Z - normal: Simulator: number
+2017-10-20T08:15:56.958Z - normal: Simulator: element size = 0
+2017-10-20T08:15:56.958Z - normal: Simulator: element0 = 100
+2017-10-20T08:15:56.959Z - normal: Simulator: element1 = 101
+2017-10-20T08:15:56.959Z - normal: Simulator: element2 = 102
+2017-10-20T08:15:56.959Z - normal: Simulator: element3 = 103
+2017-10-20T08:15:56.959Z - normal: Simulator: element4 = 104
+2017-10-20T08:15:56.959Z - normal: Simulator: element size = 5
+2017-10-20T08:15:56.959Z - normal: Simulator: element0 = 100
+2017-10-20T08:15:56.959Z - normal: Simulator: element1 = 101
+2017-10-20T08:15:56.959Z - normal: Simulator: element2 = 103
+2017-10-20T08:15:56.960Z - normal: Simulator: element3 = 104
+2017-10-20T08:15:56.960Z - normal: Simulator: element size = 4
+2017-10-20T08:15:56.960Z - normal: Simulator: test typeundefined
+2017-10-20T08:15:56.960Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:15:57.005Z - normal: Simulator: type prefab = object
+2017-10-20T08:15:57.011Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:16:15.328Z - normal: Simulator: basic_object_finalize 0x13242af0 ...
+2017-10-20T08:16:15.328Z - normal: Simulator: jsbindings: finalizing JS object 0x13242b20 (WebSocket)
+2017-10-20T08:16:15.329Z - normal: Simulator: jsbindings: finalizing JS object 0x13242b50 (SocketIO)
+2017-10-20T08:16:15.329Z - normal: Simulator: basic_object_finalize 0x13242be0 ...
+2017-10-20T08:16:15.329Z - normal: Simulator: basic_object_finalize 0x13242e80 ...
+2017-10-20T08:17:51.158Z - normal: Compiled project javascript file successfully
+2017-10-20T08:17:52.258Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 970.00
+2017-10-20T08:17:52.258Z - normal: Simulator: FRAME SCALE = 1.00
+2017-10-20T08:17:52.264Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2017-10-20T08:17:52.421Z - normal: Simulator: 
+2017-10-20T08:17:52.421Z - normal: Simulator: {
+2017-10-20T08:17:52.421Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2017-10-20T08:17:52.435Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2017-10-20T08:17:52.435Z - normal: Simulator: 	cocos2d.x.version: 1.5.2
+2017-10-20T08:17:52.436Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
+2017-10-20T08:17:52.436Z - normal: Simulator: 	gl.supports_PVRTC: false
+2017-10-20T08:17:52.436Z - normal: Simulator: 	gl.renderer: NVIDIA GeForce GTX 650 OpenGL Engine
+2017-10-20T08:17:52.436Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2017-10-20T08:17:52.436Z - normal: Simulator: 	gl.max_texture_size: 16384
+2017-10-20T08:17:52.437Z - normal: Simulator: 	gl.supports_ETC1: false
+2017-10-20T08:17:52.437Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2017-10-20T08:17:52.437Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2017-10-20T08:17:52.437Z - normal: Simulator: 	gl.max_texture_units: 16
+2017-10-20T08:17:52.437Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2017-10-20T08:17:52.437Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2017-10-20T08:17:52.438Z - normal: Simulator: 	gl.supports_NPOT: true
+2017-10-20T08:17:52.438Z - normal: Simulator: 	gl.version: 2.1 NVIDIA-10.17.34 367.15.10.45f01
+2017-10-20T08:17:52.438Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2017-10-20T08:17:52.438Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2017-10-20T08:17:52.438Z - normal: Simulator: }
+2017-10-20T08:17:52.439Z - normal: Simulator: 
+2017-10-20T08:17:52.439Z - normal: Simulator: 
+2017-10-20T08:17:52.439Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2017-10-20T08:17:52.440Z - normal: Simulator: Project Config:
+2017-10-20T08:17:52.441Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2017-10-20T08:17:52.441Z - normal: Simulator:     writable path: $(PROJDIR)/
+2017-10-20T08:17:52.441Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2017-10-20T08:17:52.441Z - normal: Simulator:     frame size: 960 x 640
+2017-10-20T08:17:52.441Z - normal: Simulator:     frame scale: 1.00
+2017-10-20T08:17:52.442Z - normal: Simulator:     show console: NO
+2017-10-20T08:17:52.442Z - normal: Simulator:     write debug log: NO ()
+2017-10-20T08:17:52.442Z - normal: Simulator:     listen: 
+2017-10-20T08:17:52.442Z - normal: Simulator:     debugger: none
+2017-10-20T08:17:52.442Z - normal: Simulator:     add searching path:
+2017-10-20T08:17:52.443Z - normal: Simulator: 
+2017-10-20T08:17:52.443Z - normal: Simulator: 
+2017-10-20T08:17:52.443Z - normal: Simulator: 
+2017-10-20T08:17:52.443Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:17:52.443Z - normal: Simulator: LOAD Js FILE: main.js
+2017-10-20T08:17:52.444Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:17:52.567Z - normal: Simulator: Cocos2d-x-lite v1.5.2
+2017-10-20T08:17:52.740Z - normal: Simulator: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/src/jsb_polyfill.js:34921:mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+2017-10-20T08:17:52.750Z - normal: Simulator: heheahhaha 测试全局用法
+2017-10-20T08:17:52.750Z - normal: Simulator: iShow!
+2017-10-20T08:17:52.899Z - normal: Simulator: hahahahhsfassaga
+2017-10-20T08:17:52.900Z - normal: Simulator: hhhehehe
+2017-10-20T08:17:52.900Z - normal: Simulator: self.size1
+2017-10-20T08:17:52.900Z - normal: Simulator: 0
+2017-10-20T08:17:52.900Z - normal: Simulator: self.size2
+2017-10-20T08:17:52.900Z - normal: Simulator: self.size1
+2017-10-20T08:17:52.901Z - normal: Simulator: 1
+2017-10-20T08:17:52.901Z - normal: Simulator: self.size2
+2017-10-20T08:17:52.901Z - normal: Simulator: to this 1
+2017-10-20T08:17:52.901Z - normal: Simulator: to this 2
+2017-10-20T08:17:52.901Z - normal: Simulator: 变成中文的情况
+2017-10-20T08:17:52.901Z - normal: Simulator: config = 1
+2017-10-20T08:17:52.902Z - normal: Simulator: wo de fak
+2017-10-20T08:17:52.902Z - normal: Simulator: 5
+2017-10-20T08:17:52.902Z - normal: Simulator: number
+2017-10-20T08:17:52.902Z - normal: Simulator: number
+2017-10-20T08:17:52.902Z - normal: Simulator: undefined
+2017-10-20T08:17:52.903Z - normal: Simulator: number
+2017-10-20T08:17:52.903Z - normal: Simulator: number
+2017-10-20T08:17:52.903Z - normal: Simulator: element size = 0
+2017-10-20T08:17:52.903Z - normal: Simulator: element0 = 100
+2017-10-20T08:17:52.903Z - normal: Simulator: element1 = 101
+2017-10-20T08:17:52.903Z - normal: Simulator: element2 = 102
+2017-10-20T08:17:52.903Z - normal: Simulator: element3 = 103
+2017-10-20T08:17:52.904Z - normal: Simulator: element4 = 104
+2017-10-20T08:17:52.904Z - normal: Simulator: element size = 5
+2017-10-20T08:17:52.904Z - normal: Simulator: element0 = 100
+2017-10-20T08:17:52.904Z - normal: Simulator: element1 = 101
+2017-10-20T08:17:52.904Z - normal: Simulator: element2 = 103
+2017-10-20T08:17:52.904Z - normal: Simulator: element3 = 104
+2017-10-20T08:17:52.905Z - normal: Simulator: element size = 4
+2017-10-20T08:17:52.905Z - normal: Simulator: test typeundefined
+2017-10-20T08:17:52.905Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:17:52.947Z - normal: Simulator: type prefab = object
+2017-10-20T08:17:52.955Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:17:57.279Z - normal: Simulator: basic_object_finalize 0x1d942af0 ...
+2017-10-20T08:17:57.279Z - normal: Simulator: jsbindings: finalizing JS object 0x1d942b20 (WebSocket)
+2017-10-20T08:17:57.279Z - normal: Simulator: jsbindings: finalizing JS object 0x1d942b50 (SocketIO)
+2017-10-20T08:17:57.279Z - normal: Simulator: basic_object_finalize 0x1d942be0 ...
+2017-10-20T08:17:57.279Z - normal: Simulator: basic_object_finalize 0x1d942e80 ...
+2017-10-20T08:54:27.257Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 970.00
+2017-10-20T08:54:27.258Z - normal: Simulator: FRAME SCALE = 1.00
+2017-10-20T08:54:27.262Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2017-10-20T08:54:27.415Z - normal: Simulator: 
+2017-10-20T08:54:27.415Z - normal: Simulator: {
+2017-10-20T08:54:27.415Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2017-10-20T08:54:27.416Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2017-10-20T08:54:27.416Z - normal: Simulator: 	cocos2d.x.version: 1.5.2
+2017-10-20T08:54:27.416Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
+2017-10-20T08:54:27.426Z - normal: Simulator: 	gl.supports_PVRTC: false
+2017-10-20T08:54:27.426Z - normal: Simulator: 	gl.renderer: NVIDIA GeForce GTX 650 OpenGL Engine
+2017-10-20T08:54:27.426Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2017-10-20T08:54:27.426Z - normal: Simulator: 	gl.max_texture_size: 16384
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.supports_ETC1: false
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2017-10-20T08:54:27.427Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.max_texture_units: 16
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2017-10-20T08:54:27.427Z - normal: Simulator: 	gl.supports_NPOT: true
+2017-10-20T08:54:27.428Z - normal: Simulator: 	gl.version: 2.1 NVIDIA-10.17.34 367.15.10.45f01
+2017-10-20T08:54:27.428Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2017-10-20T08:54:27.428Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2017-10-20T08:54:27.428Z - normal: Simulator: }
+2017-10-20T08:54:27.428Z - normal: Simulator: 
+2017-10-20T08:54:27.428Z - normal: Simulator: 
+2017-10-20T08:54:27.428Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2017-10-20T08:54:27.429Z - normal: Simulator: Project Config:
+2017-10-20T08:54:27.429Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2017-10-20T08:54:27.429Z - normal: Simulator:     writable path: $(PROJDIR)/
+2017-10-20T08:54:27.429Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2017-10-20T08:54:27.429Z - normal: Simulator:     frame size: 960 x 640
+2017-10-20T08:54:27.429Z - normal: Simulator:     frame scale: 1.00
+2017-10-20T08:54:27.429Z - normal: Simulator:     show console: NO
+2017-10-20T08:54:27.429Z - normal: Simulator:     write debug log: NO ()
+2017-10-20T08:54:27.429Z - normal: Simulator:     listen: 
+2017-10-20T08:54:27.430Z - normal: Simulator:     debugger: none
+2017-10-20T08:54:27.430Z - normal: Simulator:     add searching path:
+2017-10-20T08:54:27.430Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:54:27.430Z - normal: Simulator: LOAD Js FILE: main.js
+2017-10-20T08:54:27.430Z - normal: Simulator: ------------------------------------------------
+2017-10-20T08:54:27.536Z - normal: Simulator: Cocos2d-x-lite v1.5.2
+2017-10-20T08:54:27.685Z - normal: Simulator: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/src/jsb_polyfill.js:34921:mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+2017-10-20T08:54:27.685Z - normal: Simulator: heheahhaha 测试全局用法
+2017-10-20T08:54:27.701Z - normal: Simulator: iShow!
+2017-10-20T08:54:27.849Z - normal: Simulator: hahahahhsfassaga
+2017-10-20T08:54:27.850Z - normal: Simulator: hhhehehe
+2017-10-20T08:54:27.850Z - normal: Simulator: self.size1
+2017-10-20T08:54:27.850Z - normal: Simulator: 0
+2017-10-20T08:54:27.850Z - normal: Simulator: self.size2
+2017-10-20T08:54:27.850Z - normal: Simulator: self.size1
+2017-10-20T08:54:27.851Z - normal: Simulator: 1
+2017-10-20T08:54:27.851Z - normal: Simulator: self.size2
+2017-10-20T08:54:27.851Z - normal: Simulator: to this 1
+2017-10-20T08:54:27.851Z - normal: Simulator: to this 2
+2017-10-20T08:54:27.851Z - normal: Simulator: 变成中文的情况
+2017-10-20T08:54:27.851Z - normal: Simulator: config = 1
+2017-10-20T08:54:27.851Z - normal: Simulator: wo de fak
+2017-10-20T08:54:27.852Z - normal: Simulator: 5
+2017-10-20T08:54:27.852Z - normal: Simulator: number
+2017-10-20T08:54:27.852Z - normal: Simulator: number
+2017-10-20T08:54:27.852Z - normal: Simulator: undefined
+2017-10-20T08:54:27.852Z - normal: Simulator: number
+2017-10-20T08:54:27.852Z - normal: Simulator: number
+2017-10-20T08:54:27.852Z - normal: Simulator: element size = 0
+2017-10-20T08:54:27.853Z - normal: Simulator: element0 = 100
+2017-10-20T08:54:27.853Z - normal: Simulator: element1 = 101
+2017-10-20T08:54:27.853Z - normal: Simulator: element2 = 102
+2017-10-20T08:54:27.853Z - normal: Simulator: element3 = 103
+2017-10-20T08:54:27.853Z - normal: Simulator: element4 = 104
+2017-10-20T08:54:27.853Z - normal: Simulator: element size = 5
+2017-10-20T08:54:27.853Z - normal: Simulator: element0 = 100
+2017-10-20T08:54:27.853Z - normal: Simulator: element1 = 101
+2017-10-20T08:54:27.854Z - normal: Simulator: element2 = 103
+2017-10-20T08:54:27.854Z - normal: Simulator: element3 = 104
+2017-10-20T08:54:27.854Z - normal: Simulator: element size = 4
+2017-10-20T08:54:27.854Z - normal: Simulator: test typeundefined
+2017-10-20T08:54:27.854Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:54:27.896Z - normal: Simulator: type prefab = object
+2017-10-20T08:54:27.906Z - normal: Simulator: 0 wocao 0
+2017-10-20T08:54:43.913Z - normal: Simulator: basic_object_finalize 0x11c42af0 ...
+2017-10-20T08:54:43.914Z - normal: Simulator: jsbindings: finalizing JS object 0x11c42b20 (WebSocket)
+2017-10-20T08:54:43.914Z - normal: Simulator: jsbindings: finalizing JS object 0x11c42b50 (SocketIO)
+2017-10-20T08:54:43.914Z - normal: Simulator: basic_object_finalize 0x11c42be0 ...
+2017-10-20T08:54:43.915Z - normal: Simulator: basic_object_finalize 0x11c42e80 ...
+2017-10-20T09:01:50.768Z - failed: [db-task][sync-changes] Failed to import asset /Users/splspeco/Documents/ggame/assets/resources/control/ListView.js, message: Compile error: SyntaxError: unknown: Unexpected token (110:30)
+  108 |         else{
+  109 |             this.node.height = this.height;
+> 110 |             this.node.width = ;
+      |                               ^
+  111 |         }    
+  112 | 
+  113 |         dl.excuteWithFunc(function(data, index){
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4443:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1755:8)
+    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3740:12)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3484:19)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3464:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3394:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3371:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3334:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3357:23)
+    at Parser.pp$3.parseExpression (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3296:19)
+2017-10-20T09:02:15.612Z - normal: Compiled project javascript file successfully

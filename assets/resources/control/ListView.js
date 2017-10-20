@@ -1,7 +1,7 @@
 var array1 = require("array1");
 
 cc.Class({
-    extends: cc.Layout,
+    extends: cc.Component,
 
     properties: {
         // foo: {
@@ -106,12 +106,7 @@ cc.Class({
             this.node.width = this.width;
         }
         else{
-            this.calcSection = function(self) {
-                if(!self.dp || self.dp.size() == 0){
-                    
-                }
-                var interval = self.itemHeight + self.vgap;
-            };
+            this.node.height = this.height;
         }    
 
         dl.excuteWithFunc(function(data, index){

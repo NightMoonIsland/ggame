@@ -5,6 +5,7 @@ cc._RF.push(module, '269e1Js5atI95Fh+ZKOp1kb', 'langZh');
 "use strict";
 
 var Lang = [];
+
 Lang["ITEM_VALUE"] = "变成中文的情况";
 
 module.exports = Lang;

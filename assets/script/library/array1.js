@@ -96,7 +96,11 @@ cc.Class({
         console.log("element size = " + this.size);
     },
 
-
+    excuteWithFunc: function(func) {
+        for(var i = 0; i < this.size; i++){
+            func(this.list[i], i);
+        }
+    },
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

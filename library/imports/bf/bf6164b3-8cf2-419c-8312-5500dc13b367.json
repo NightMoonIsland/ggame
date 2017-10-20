@@ -50,7 +50,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 240,
-      "height": 250
+      "height": 100
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -58,8 +58,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -75,
-      "y": 94
+      "x": 0,
+      "y": 0
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -186,7 +186,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 220,
+      "width": 240,
       "height": 100
     },
     "_rotationX": 0,
@@ -289,7 +289,7 @@
     "asset": {
       "__uuid__": "bf6164b3-8cf2-419c-8312-5500dc13b367"
     },
-    "fileId": "f6e59ZF+1BKio2Snm/h/tAF",
+    "fileId": "652efYV3E9KULVyMDJU0a1r",
     "sync": false
   },
   {
@@ -301,7 +301,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 8
@@ -388,7 +388,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 11
@@ -475,7 +475,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 14
@@ -562,7 +562,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 17
@@ -649,7 +649,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 20
@@ -736,7 +736,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 23
@@ -823,7 +823,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 26
@@ -931,9 +931,20 @@
     "_N$spacingY": 0,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
-    "testList": {
+    "scrollView": {
       "__id__": 29
-    }
+    },
+    "dir": 0,
+    "lines": 0,
+    "hgap": 0,
+    "vgap": 0,
+    "width": 0,
+    "height": 0,
+    "dp": null,
+    "item": null,
+    "itemPwd": null,
+    "itemHeight": 0,
+    "itemWidth": 0
   },
   {
     "__type__": "cc.ScrollView",

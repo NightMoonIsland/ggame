@@ -19,7 +19,14 @@ function init() {
 
     cc.tool.Lang = require("langZh");
     console.log(cc.tool.Lang["ITEM_VALUE"]);
+
+    cc.tool.prefab = {};
     // cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
+
+    cc.tool.config = require("config");
+    console.log("config = " + cc.tool.config.Direction.HORIZONTAL);
+
+    console.log("wo de fak");
 
     var haha = [];
     for (i = 0; i < 5; i++) {
@@ -68,6 +75,28 @@ cc.Class({
         console.log("hahahahhsfassaga");
         init();
         this.initScene();
+
+        var self = this;
+        cc.loader.loadRes("control/ListView", cc.Prefab, function (err, prefab) {
+            // cc.tool.prefab.listView = prefab;
+            console.log("type prefab = " + (typeof prefab === "undefined" ? "undefined" : _typeof(prefab)));
+
+            var root = cc.instantiate(prefab);
+            root.setPosition(cc.v2(0, 0));
+            var listView = root.getChildByName("view").getChildByName("content").getComponent("ListView");
+            listView.create(cc.tool.config.Direction.HORIZONTAL, 1, 1, 1, 240, 150);
+            listView.setItemModel("control/Renderer", 160, 60);
+
+            var array = require("array1");
+            var test = new array();
+            for (i = 0; i < 5; i++) {
+                test.pushBack(i + 100);
+            }
+
+            listView.setDataProvider(test);
+
+            self.node.addChild(root);
+        });
     },
 
     initScene: function initScene() {

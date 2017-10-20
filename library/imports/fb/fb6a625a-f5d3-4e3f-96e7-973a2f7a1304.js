@@ -98,6 +98,12 @@ cc.Class({
         for (i = 0; i < this.size; i++) {
             console.log("element" + i + " = " + this.list[i]);
         }console.log("element size = " + this.size);
+    },
+
+    excuteWithFunc: function excuteWithFunc(func) {
+        for (var i = 0; i < this.size; i++) {
+            func(this.list[i], i);
+        }
     }
 
 });

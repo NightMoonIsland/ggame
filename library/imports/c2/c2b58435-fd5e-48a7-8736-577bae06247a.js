@@ -5,8 +5,6 @@ cc._RF.push(module, 'c2b58Q1/V5Ip4c2V3uuBiR6', 'viewManager');
 "use strict";
 
 cc.Class({
-    // extends: cc.Component,
-
     properties: {
         // foo: {
         //    default: null,      // The default value will be used only when the component attaching
@@ -20,7 +18,8 @@ cc.Class({
         // ...
         viewList: null,
         viewInfo: [],
-        view: null
+        view: null,
+        viewName: null
     },
 
     ctor: function ctor() {
@@ -59,14 +58,7 @@ cc.Class({
 
     registView: function registView(viewName, module, title) {
         this.viewInfo[viewName] = { viewName: viewName, module: module, title: title };
-
-        var viewInfo = this.viewInfo[viewName];
-        this.viewInfo[0] = "hahah";
-        this.viewInfo[1] = "wocao";
-        console.log(viewInfo);
-        console.log(this.viewInfo.length);
     },
-
 
     changeView: function changeView(viewName) {
         if (!this.viewList.empty() && this.viewList.back() == viewName) {
@@ -74,11 +66,9 @@ cc.Class({
             return this.view;
         }
 
-        var viewInfo = this.viewInfo[viewName];
-
-        if (this.view != null) {
-            this.view.removeFromParent();
-        }
+        var viewAbout = this.viewInfo[viewName];
+        console.log("wocao 1");
+        console.log("wocao 2");
 
         var idx = this.viewList.find(viewName);
         if (idx != this.viewList.npos) {
@@ -87,14 +77,21 @@ cc.Class({
         } else {
             this.viewList.pushBack(viewName);
         }
+        console.log("wocao 3");
+
         var self = this;
         //通过链接 加载的资源 必须放在resource下
-        cc.loader.loadRes("prefab/Test1Panel", function (err, prefab) {
+        cc.loader.loadRes(viewAbout.module, function (err, prefab) {
             var root = cc.instantiate(prefab);
-            self.view = root;
             cc.director.getScene().getChildByName("Canvas").addChild(root);
+            if (self.view != null) {
+                self.view.removeFromParent();
+                self.view = null;
+            }
+            self.view = root;
         });
 
+        this.viewName = viewName;
         return this.view;
     },
 
@@ -105,6 +102,8 @@ cc.Class({
         cc.tool.eventManager.testWorkListener();
         this.view.removeFromParent(false);
         cc.loader.releaseRes("prefab/Test1Panel");
+
+        return this.view;
     },
 
     testAddChild: function testAddChild(varName) {
@@ -115,7 +114,40 @@ cc.Class({
         }
     },
 
-    backPreview: function backPreview() {}
+    curViewName: function curViewName() {
+        return this.viewName;
+    },
+
+    backPreview: function backPreview() {
+        if (this.viewList.getSize() > 0) {
+            this.viewList.popBack();
+
+            var viewName = this.viewList.back();
+            var viewAbout = this.viewInfo[viewName];
+            if (viewAbout == null) {
+                if (this.view != null) {
+                    this.view.removeFromParent();
+                }
+                this.viewName = null;
+                this.view = null;
+                return null;
+            }
+
+            var self = this;
+            cc.loader.loadRes(viewAbout.module, function (err, prefab) {
+                var root = cc.instantiate(prefab);
+                cc.director.getScene().getChildByName("Canvas").addChild(root);
+                if (self.view != null) {
+                    self.view.removeFromParent();
+                    self.view = null;
+                }
+                self.view = root;
+            });
+            this.viewName = viewName;
+            return this.view;
+        }
+        return null;
+    }
 });
 
 cc._RF.pop();

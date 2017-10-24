@@ -90,6 +90,14 @@ cc.Class({
         return this.size;
     },
 
+    back: function back() {
+        if (this.size > 0) {
+            return this.list[this.size - 1];
+        } else {
+            return null;
+        }
+    },
+
     empty: function empty() {
         return this.size == 0;
     },
@@ -103,6 +111,13 @@ cc.Class({
     excuteWithFunc: function excuteWithFunc(func) {
         for (var i = 0; i < this.size; i++) {
             func(this.list[i], i);
+        }
+    },
+
+    popBack: function popBack() {
+        if (this.size > 0) {
+            delete this.list[this.size - 1];
+            this.size = this.size - 1;
         }
     }
 

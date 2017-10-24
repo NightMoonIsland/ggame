@@ -1,1 +1,1 @@
-{"version":3,"sources":["assets/script/tool/viewRegister.js"],"names":["console","log","module","exports"],"mappings":";;;;;;AAAAA,QAAQC,GAAR,CAAY,mBAAZ;;AAIAC,OAAOC,OAAP,GAAiB,IAAjB","file":"unknown","sourcesContent":["console.log(\"heheahhaha 测试全局用法\");\n\n\n\nmodule.exports = null;"]}
+{"version":3,"sources":["assets/script/tool/viewRegister.js"],"names":["console","log","module","exports"],"mappings":";;;;;;AAAAA,QAAQC,GAAR,CAAY,mBAAZ;;AAGAC,OAAOC,OAAP,GAAiB,IAAjB","file":"unknown","sourcesContent":["console.log(\"heheahhaha 测试全局用法\");\n\n\nmodule.exports = null;"]}

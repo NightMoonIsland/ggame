@@ -12,27 +12,40 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        count: 0,
+        eventType: null,
     },
 
     // use this for initialization
     onLoad: function () {
+        this.eventType = new Array("sec1", "sec2", "sec3");
+        
+        var self = this;
+        for(var i = 0; i < this.eventType.length; i++){
+            cc.tool.eventManager.addEventListener(self.eventType[i], self, self.onVarCallback);
+        }
     },
 
-    ctor: function() {
-        console.log("zenm ehuizheyang");
-        this.schedule(function(){
-            console.log("hahahahahha");
-        }, 1);
+    onVarCallback: function(self, varName) {
+        if(varName == "sec1"){
+            //self.output();
+            self.node.getChildByName("txthaha").getComponent(cc.Label).string = "sec = " + cc.tool.gameVariable.sec;
+        }
+        else if(varName == ""){
+
+        }
     },
 
-    dosomething: function(){
-        console.log("dsgfsdagvdga");
-        // console.log("this.count = " + this.count);
-        // this.count = this.count + 1;
+    output: function(){
+        console.log("wo cao ni ma ge chou hai");
     },
+
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 
     // },
+
+    btnTeam: function() {
+        
+        // cc.tool.viewManager.changeView("kilie5View");
+    },
 });

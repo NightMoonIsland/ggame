@@ -13,44 +13,26 @@ function init() {
     cc.tool.viewManager.init();
 
     require("viewRegister");
+    viewRegister();
+
+    var timeHandler = require("timeHandler");
+    cc.tool.timeHandler = new timeHandler();
 
     var eventManager = require("eventManager");
     cc.tool.eventManager = new eventManager();
 
+    cc.tool.gameVariable = require("gameVariable");
     cc.tool.Lang = require("langZh");
-    console.log(cc.tool.Lang["ITEM_VALUE"]);
 
     cc.tool.prefab = {};
     // cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
 
     cc.tool.config = require("config");
-    console.log("config = " + cc.tool.config.Direction.HORIZONTAL);
+}
 
-    console.log("wo de fak");
-
-    var haha = [];
-    for (i = 0; i < 5; i++) {
-        haha[i] = i;
-    }
-    console.log(haha.length);
-    delete haha[2];
-    for (i = 0; i < 5; i++) {
-        console.log(_typeof(haha[i]));
-    }
-
-    var array = require("array1");
-    var test = new array();
-    test.outPut();
-    for (i = 0; i < 5; i++) {
-        test.pushBack(i + 100);
-    }
-    test.outPut();
-    test.remove(2);
-    test.outPut();
-
-    // cc.variable = {};
-    // var array1 = require("array1");
-    // cc.variable.viewList = new array1();
+function viewRegister() {
+    cc.tool.viewManager.registView("kmView", "ui/kmView", 2);
+    cc.tool.viewManager.registView("kilie5View", "ui/kilie5View", 2);
 }
 
 cc.Class({
@@ -67,36 +49,47 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        haha: []
+        haha: [],
+        count: 0
     },
 
     // use this for initialization
     onLoad: function onLoad() {
-        console.log("hahahahhsfassaga");
         init();
-        this.initScene();
 
-        var self = this;
-        cc.loader.loadRes("control/ListView", cc.Prefab, function (err, prefab) {
-            // cc.tool.prefab.listView = prefab;
-            console.log("type prefab = " + (typeof prefab === "undefined" ? "undefined" : _typeof(prefab)));
+        // var self = this;
+        // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
+        //     // cc.tool.prefab.listView = prefab;
+        //     console.log("type prefab = " + typeof prefab)
 
-            var root = cc.instantiate(prefab);
-            root.setPosition(cc.v2(0, 0));
-            var listView = root.getChildByName("view").getChildByName("content").getComponent("ListView");
-            listView.create(cc.tool.config.Direction.HORIZONTAL, 1, 1, 1, 240, 150);
-            listView.setItemModel("control/Renderer", 160, 60);
+        //     var root = cc.instantiate(prefab);
+        //     root.setPosition(cc.v2(0, 0));
+        //     let listView = root.getChildByName("view").getChildByName("content").getComponent("ListView");
+        //     listView.create(cc.tool.config.Direction.HORIZONTAL, 1, 1, 1, 240, 150);
+        //     listView.setItemModel("control/Renderer", 160, 60);
 
-            var array = require("array1");
-            var test = new array();
-            for (i = 0; i < 5; i++) {
-                test.pushBack(i + 100);
-            }
+        //     var array = require("array1");
+        //     var test = new array();
+        //     for(i = 0; i < 5; i++){
+        //         test.pushBack(i + 100)
+        //     }
 
-            listView.setDataProvider(test);
+        //     listView.setDataProvider(test);
 
-            self.node.addChild(root);
-        });
+
+        //     self.node.addChild(root);
+        // });
+
+        this.schedule(function () {
+            this.updateTime();
+        }, 1);
+    },
+
+    updateTime: function updateTime() {
+        console.log("this.count = " + this.count);
+        this.count = this.count + 1;
+        cc.tool.eventManager.VAR_CHANGE("sec1");
+        cc.tool.gameVariable.sec = cc.tool.gameVariable.sec + 1;
     },
 
     initScene: function initScene() {
@@ -106,12 +99,11 @@ cc.Class({
     },
 
     testRemove: function testRemove() {
-        var test = require("eventManager");
-        var haha = new test();
-        haha.init();
-        cc.tool.viewManager.curView();
-        // var test = require("eventManager")
-        // var haha = new test();
+        cc.tool.viewManager.changeView("kmView");
+    },
+
+    btnBack: function btnBack() {
+        cc.tool.viewManager.backPreview();
     }
 
 });

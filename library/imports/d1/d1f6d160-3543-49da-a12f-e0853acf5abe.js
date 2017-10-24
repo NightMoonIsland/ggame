@@ -4,6 +4,7 @@ cc._RF.push(module, 'd1f6dFgNUNJ2qEv4IU6z1q+', 'eventManager');
 
 "use strict";
 
+var array1 = require("array1");
 var test = require("test");
 
 cc.Class({
@@ -35,12 +36,13 @@ cc.Class({
     },
 
     addEventListener: function addEventListener(eventType, target, func) {
+        target.output();
         // console.log()
         if (!target || !func) return;
         if (!this.eventListener[eventType]) {
-            this.eventListener[eventType] = [];
+            this.eventListener[eventType] = new array1();
         }
-        this.eventListener[eventType][target] = func;
+        this.eventListener[eventType].pushBack({ target: target, func: func });
     },
 
     testWorkListener: function testWorkListener() {
@@ -52,10 +54,19 @@ cc.Class({
     },
 
     dispatchEventListener: function dispatchEventListener(eventType) {
-        for (var key in this.eventListener[eventType]) {
-            var func = this.eventListener[eventType][key];
-            func(eventType);
-        }
+        this.eventListener[eventType].excuteWithFunc(function (item, index) {
+            var func = item.func;
+            var target = item.target;
+            func(target, eventType);
+        });
+        // for(var key in this.eventListener[eventType]){
+        //     var func = this.eventListener[eventType][key];
+        //     func(key, eventType);
+        // }
+    },
+
+    VAR_CHANGE: function VAR_CHANGE(varName) {
+        this.dispatchEventListener(varName);
     }
 
 });

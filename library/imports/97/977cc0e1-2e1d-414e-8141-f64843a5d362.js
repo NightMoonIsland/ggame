@@ -18,11 +18,24 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        count: 0
     },
 
     // use this for initialization
-    onLoad: function onLoad() {}
+    onLoad: function onLoad() {},
 
+    ctor: function ctor() {
+        console.log("zenm ehuizheyang");
+        this.schedule(function () {
+            console.log("hahahahahha");
+        }, 1);
+    },
+
+    dosomething: function dosomething() {
+        console.log("dsgfsdagvdga");
+        // console.log("this.count = " + this.count);
+        // this.count = this.count + 1;
+    }
 });
 
 cc._RF.pop();

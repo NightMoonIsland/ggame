@@ -1,57 +1,54 @@
-2017-10-24T06:17:44.069Z - normal: Load ~/.CocosCreator/settings.json
-2017-10-24T06:17:44.073Z - normal: checking language setting...
-2017-10-24T06:17:44.073Z - normal: Language: zh
-2017-10-24T06:17:44.363Z - success: protocol editor-framework registered
-2017-10-24T06:17:44.363Z - success: protocol app registered
-2017-10-24T06:17:44.363Z - success: protocol theme registered
-2017-10-24T06:17:44.364Z - success: protocol profile registered
-2017-10-24T06:17:44.364Z - success: protocol packages registered
-2017-10-24T06:17:44.366Z - success: protocol unpack registerred
-2017-10-24T06:17:44.366Z - success: protocol disable-commonjs registerred
-2017-10-24T06:17:44.557Z - normal: connected!
-2017-10-24T06:17:44.559Z - normal: Check project /Users/splspeco/Documents/ggame
-2017-10-24T06:17:44.560Z - normal: Initializing Cocos2d
-2017-10-24T06:17:44.704Z - normal: Initializing Asset Database
-2017-10-24T06:17:44.732Z - success: protocol uuid registerred
-2017-10-24T06:17:44.732Z - success: protocol db registerred
-2017-10-24T06:17:44.732Z - success: protocol thumbnail registerred
-2017-10-24T06:17:44.732Z - normal: Loading editor/builtin packages
-2017-10-24T06:17:44.748Z - success: anysdk loaded
-2017-10-24T06:17:44.871Z - success: assets loaded
-2017-10-24T06:17:44.874Z - success: builder loaded
-2017-10-24T06:17:44.878Z - success: hierarchy loaded
-2017-10-24T06:17:44.881Z - success: inspector loaded
-2017-10-24T06:17:44.882Z - success: keystore loaded
-2017-10-24T06:17:44.885Z - success: node-library loaded
-2017-10-24T06:17:44.886Z - success: package-asset loaded
-2017-10-24T06:17:44.887Z - success: preferences loaded
-2017-10-24T06:17:44.899Z - success: project-importer loaded
-2017-10-24T06:17:44.902Z - success: project-settings loaded
-2017-10-24T06:17:44.905Z - success: ui-kit loaded
-2017-10-24T06:17:44.909Z - success: ui-grid loaded
-2017-10-24T06:17:44.912Z - success: scene loaded
-2017-10-24T06:17:44.913Z - success: sprite-editor loaded
-2017-10-24T06:17:44.916Z - success: store loaded
-2017-10-24T06:17:44.920Z - success: timeline loaded
-2017-10-24T06:17:44.920Z - normal: Loading builtin packages
-2017-10-24T06:17:44.925Z - success: asset-db-debugger loaded
-2017-10-24T06:17:44.926Z - success: code-editor loaded
-2017-10-24T06:17:44.927Z - success: color-picker loaded
-2017-10-24T06:17:44.931Z - success: console loaded
-2017-10-24T06:17:44.933Z - success: package-manager loaded
-2017-10-24T06:17:44.937Z - success: sdkbox loaded
-2017-10-24T06:17:44.941Z - success: tester loaded
-2017-10-24T06:17:44.945Z - success: ui-kit-preview-extra loaded
-2017-10-24T06:17:44.948Z - success: ui-kit-preview loaded
-2017-10-24T06:17:44.951Z - success: ui-tree loaded
-2017-10-24T06:17:45.623Z - normal: Initializing project /Users/splspeco/Documents/ggame
-2017-10-24T06:17:45.625Z - normal: Loading packages
-2017-10-24T06:17:45.632Z - success: splspeco-tool loaded
-2017-10-24T06:17:45.634Z - success: splspeco-love loaded
-2017-10-24T06:17:45.634Z - normal: Watching packages
-2017-10-24T06:17:45.649Z - normal: Run Application
-2017-10-24T06:17:45.966Z - success: preview server running at http://localhost:7456
-2017-10-24T06:17:49.501Z - normal: 1.5.2
-2017-10-24T06:17:53.414Z - normal: Hello World!
-2017-10-24T06:52:46.119Z - normal: Compiled project javascript file successfully
-2017-10-24T06:52:54.714Z - normal: Compiled project javascript file successfully
+2017-10-26T06:30:11.079Z - normal: Load ~/.CocosCreator/settings.json
+2017-10-26T06:30:11.082Z - normal: checking language setting...
+2017-10-26T06:30:11.082Z - normal: Language: zh
+2017-10-26T06:30:11.382Z - success: protocol editor-framework registered
+2017-10-26T06:30:11.383Z - success: protocol app registered
+2017-10-26T06:30:11.383Z - success: protocol theme registered
+2017-10-26T06:30:11.383Z - success: protocol profile registered
+2017-10-26T06:30:11.383Z - success: protocol packages registered
+2017-10-26T06:30:11.385Z - success: protocol unpack registerred
+2017-10-26T06:30:11.385Z - success: protocol disable-commonjs registerred
+2017-10-26T06:30:11.654Z - normal: connected!
+2017-10-26T06:30:11.657Z - normal: Check project /Users/splspeco/Documents/ggame
+2017-10-26T06:30:11.658Z - normal: Initializing Cocos2d
+2017-10-26T06:30:11.830Z - normal: Initializing Asset Database
+2017-10-26T06:30:11.859Z - success: protocol uuid registerred
+2017-10-26T06:30:11.859Z - success: protocol db registerred
+2017-10-26T06:30:11.859Z - success: protocol thumbnail registerred
+2017-10-26T06:30:11.859Z - normal: Loading editor/builtin packages
+2017-10-26T06:30:11.875Z - success: anysdk loaded
+2017-10-26T06:30:11.979Z - success: assets loaded
+2017-10-26T06:30:11.982Z - success: builder loaded
+2017-10-26T06:30:11.985Z - success: hierarchy loaded
+2017-10-26T06:30:11.988Z - success: inspector loaded
+2017-10-26T06:30:11.990Z - success: keystore loaded
+2017-10-26T06:30:11.993Z - success: node-library loaded
+2017-10-26T06:30:11.994Z - success: package-asset loaded
+2017-10-26T06:30:11.996Z - success: preferences loaded
+2017-10-26T06:30:12.007Z - success: project-importer loaded
+2017-10-26T06:30:12.010Z - success: project-settings loaded
+2017-10-26T06:30:12.012Z - success: ui-kit loaded
+2017-10-26T06:30:12.016Z - success: ui-grid loaded
+2017-10-26T06:30:12.019Z - success: scene loaded
+2017-10-26T06:30:12.020Z - success: sprite-editor loaded
+2017-10-26T06:30:12.024Z - success: store loaded
+2017-10-26T06:30:12.028Z - success: timeline loaded
+2017-10-26T06:30:12.028Z - normal: Loading builtin packages
+2017-10-26T06:30:12.031Z - success: asset-db-debugger loaded
+2017-10-26T06:30:12.033Z - success: code-editor loaded
+2017-10-26T06:30:12.034Z - success: color-picker loaded
+2017-10-26T06:30:12.037Z - success: console loaded
+2017-10-26T06:30:12.040Z - success: package-manager loaded
+2017-10-26T06:30:12.044Z - success: sdkbox loaded
+2017-10-26T06:30:12.047Z - success: tester loaded
+2017-10-26T06:30:12.050Z - success: ui-kit-preview-extra loaded
+2017-10-26T06:30:12.053Z - success: ui-kit-preview loaded
+2017-10-26T06:30:12.056Z - success: ui-tree loaded
+2017-10-26T06:30:12.701Z - normal: Initializing project /Users/splspeco/Documents/ggame
+2017-10-26T06:30:12.703Z - normal: Loading packages
+2017-10-26T06:30:12.710Z - success: splspeco-tool loaded
+2017-10-26T06:30:12.713Z - success: splspeco-love loaded
+2017-10-26T06:30:12.713Z - normal: Watching packages
+2017-10-26T06:30:12.729Z - normal: Run Application
+2017-10-26T06:30:13.092Z - success: preview server running at http://localhost:7456
+2017-10-26T06:30:16.593Z - normal: 1.5.2

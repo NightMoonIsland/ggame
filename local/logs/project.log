@@ -52,3 +52,6 @@
 2017-10-26T06:30:12.729Z - normal: Run Application
 2017-10-26T06:30:13.092Z - success: preview server running at http://localhost:7456
 2017-10-26T06:30:16.593Z - normal: 1.5.2
+2017-10-26T06:49:13.577Z - normal: Compiled project javascript file successfully
+2017-10-26T06:59:38.783Z - normal: Compiled project javascript file successfully
+2017-10-26T06:59:38.855Z - warn: Can not serialize 'ListView.dp' because the specified type is anonymous, please provide a class name or set the 'serializable' attribute of 'ListView.dp' to 'false'.

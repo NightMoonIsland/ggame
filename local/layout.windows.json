@@ -5,8 +5,8 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 197,
-      "y": 45,
+      "x": 106,
+      "y": 23,
       "width": 1723,
       "height": 914,
       "layout": {
@@ -99,7 +99,8 @@
         "node-library",
         "timeline"
       ]
-    }
+    },
+    "worker": {}
   },
   "panels": {
     "sprite-editor": {

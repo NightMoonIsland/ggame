@@ -5,7 +5,6 @@ cc._RF.push(module, 'fb6a6Ja9dNOP5bnlzovehME', 'array1');
 "use strict";
 
 cc.Class({
-    extends: cc.Component,
 
     properties: {
         // foo: {

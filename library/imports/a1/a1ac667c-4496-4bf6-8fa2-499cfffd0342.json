@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "yayi",
+    "texture": "e974df9d-a81b-46ca-ae99-1509aa9b6308",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      421,
+      750
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      421,
+      750
+    ]
+  }
+}

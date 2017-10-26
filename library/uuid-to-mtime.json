@@ -15,8 +15,8 @@
     "relativePath": "script"
   },
   "c0d3c332-72b7-4b1f-9d6c-83ca4c2d69f3": {
-    "asset": 1508988049000,
-    "meta": 1508988049000,
+    "asset": 1509000398000,
+    "meta": 1509000398000,
     "relativePath": "scene/start.fire"
   },
   "8a60caef-cbf8-4388-b9d5-8151496a8bce": {
@@ -133,11 +133,6 @@
     "asset": 1508825321000,
     "meta": 1508825322000,
     "relativePath": "resources/ui/kmView.prefab"
-  },
-  "fb6a625a-f5d3-4e3f-96e7-973a2f7a1304": {
-    "asset": 1508815783000,
-    "meta": 1508815788000,
-    "relativePath": "script/library/array1.js"
   },
   "b079dfac-2346-4d5a-986c-f63f10c5d903": {
     "asset": 1508816305000,
@@ -428,5 +423,35 @@
     "asset": 1499393327000,
     "meta": 1508835695000,
     "relativePath": "prefab/webview.prefab"
+  },
+  "badf99da-004b-4e9e-80a4-0502fe0dee13": {
+    "asset": 1508999879000,
+    "meta": 1508999879000,
+    "relativePath": "texture/atlas/peien2.jpg"
+  },
+  "2ebe77c9-537f-43ea-93a6-281d075ada8d": {
+    "asset": 1508999879000,
+    "meta": 1508999879000,
+    "relativePath": "texture/atlas/peien1.jpg"
+  },
+  "38d761b3-3d4d-4316-a1bf-bb7914c2e1c2": {
+    "asset": 1508999891000,
+    "meta": 1508999894000,
+    "relativePath": "texture/atlas/atlas.pac"
+  },
+  "e974df9d-a81b-46ca-ae99-1509aa9b6308": {
+    "asset": 1508999988000,
+    "meta": 1508999988000,
+    "relativePath": "texture/entity/yayi.jpeg"
+  },
+  "25f6293b-798b-438e-aea3-9aa9f8bbd43f": {
+    "asset": 1509000380000,
+    "meta": 1509000551000,
+    "relativePath": "script/tool/socket.io.js"
+  },
+  "fb6a625a-f5d3-4e3f-96e7-973a2f7a1304": {
+    "asset": 1509000583000,
+    "meta": 1509001176000,
+    "relativePath": "script/library/array1.js"
   }
 }

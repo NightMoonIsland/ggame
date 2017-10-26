@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "peien2",
+    "texture": "badf99da-004b-4e9e-80a4-0502fe0dee13",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      534,
+      300
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      534,
+      300
+    ]
+  }
+}

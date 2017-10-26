@@ -37,7 +37,7 @@ cc.Class((_cc$Class = {
         width: 0,
         height: 0,
 
-        dp: array1,
+        dp: null,
         item: cc.Prefab,
         itemPwd: null,
         itemHeight: 0,
@@ -46,7 +46,7 @@ cc.Class((_cc$Class = {
 
     ctor: function ctor() {
         this.updateTimer = 0;
-        dp = null;
+        dp = new array1();
     },
 
     create: function create(dir, lines, hgap, vgap, width, height) {

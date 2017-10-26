@@ -50,6 +50,7 @@ cc.Class({
     },
 
     dispatchEventListener: function(eventType) {
+        console.log("eventType");
         this.eventListener[eventType].excuteWithFunc(function(item, index){
             var func = item.func;
             var target = item.target;

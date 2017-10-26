@@ -21,6 +21,10 @@ function init(){
     // cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
 
     cc.tool.config = require("config");
+
+    cc.tool.protocolInit = require("protocolInit");
+    cc.tool.protocolHandler = require("protocolHandler");
+    console.log("array's length = " + cc.tool.protocolInit.tmRes.length);
 }
 
 function viewRegister(){
@@ -73,16 +77,27 @@ cc.Class({
         //     self.node.addChild(root);
         // });
 
-        this.schedule(function(){
-            this.updateTime();
-        }, 1);
+        //暂时不用定时器
+        // this.schedule(function(){
+        //     this.updateTime();
+        // }, 1);
+
+        this.testFunc();
     },
 
     updateTime: function() {
         console.log("this.count = " + this.count);
         this.count = this.count + 1;
-        cc.tool.eventManager.VAR_CHANGE("sec1");
+        // cc.tool.eventManager.VAR_CHANGE("sec1");
         cc.tool.gameVariable.sec = cc.tool.gameVariable.sec + 1;
+    },
+
+    testFunc: function() {
+        var str1 = "helloword";
+        this.helloword = function(){
+            console.log("wotefunck");
+        }
+        this[str1]();
     },
 
     initScene: function() {
@@ -103,4 +118,15 @@ cc.Class({
     // update: function (dt) {
 
     // },
+
+    connectTest: function() {
+        console.log("work connect");
+        var socket = io.connect('10.10.30.234:12345', function(msg){
+            console.log(msg);
+        });
+        for(var i = 0; i < cc.tool.protocolInit.tmRes.length; i++){
+            socket.on(cc.tool.protocolInit.tmRes[i], cc.tool.protocolHandler[cc.tool.protocolInit.tmRes[i]]);
+        }
+        socket.emit('hehehaha', {abc:"wozhenderilegoule"});
+    },
 });

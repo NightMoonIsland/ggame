@@ -55,3 +55,155 @@
 2017-10-26T06:49:13.577Z - normal: Compiled project javascript file successfully
 2017-10-26T06:59:38.783Z - normal: Compiled project javascript file successfully
 2017-10-26T06:59:38.855Z - warn: Can not serialize 'ListView.dp' because the specified type is anonymous, please provide a class name or set the 'serializable' attribute of 'ListView.dp' to 'false'.
+2017-10-26T07:04:32.199Z - normal: Compiled project javascript file successfully
+2017-10-26T07:04:32.348Z - warn: Can not serialize 'ListView.dp' because the specified type is anonymous, please provide a class name or set the 'serializable' attribute of 'ListView.dp' to 'false'.
+2017-10-26T07:05:42.203Z - normal: Compiled project javascript file successfully
+2017-10-26T07:05:42.261Z - warn: Can not serialize 'ListView.dp' because the specified type is anonymous, please provide a class name or set the 'serializable' attribute of 'ListView.dp' to 'false'.
+2017-10-26T07:22:54.063Z - normal: Compiled project javascript file successfully
+2017-10-26T07:22:54.182Z - warn: Can not serialize 'ListView.dp' because the specified type is anonymous, please provide a class name or set the 'serializable' attribute of 'ListView.dp' to 'false'.
+2017-10-26T07:23:01.631Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 970.00
+2017-10-26T07:23:01.631Z - normal: Simulator: FRAME SCALE = 1.00
+2017-10-26T07:23:01.637Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2017-10-26T07:23:01.790Z - normal: Simulator: 
+2017-10-26T07:23:01.790Z - normal: Simulator: {
+2017-10-26T07:23:01.790Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2017-10-26T07:23:01.807Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2017-10-26T07:23:01.807Z - normal: Simulator: 	cocos2d.x.version: 1.5.2
+2017-10-26T07:23:01.807Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
+2017-10-26T07:23:01.807Z - normal: Simulator: 	gl.supports_PVRTC: false
+2017-10-26T07:23:01.807Z - normal: Simulator: 	gl.renderer: NVIDIA GeForce GTX 650 OpenGL Engine
+2017-10-26T07:23:01.807Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.max_texture_size: 16384
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.supports_ETC1: false
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2017-10-26T07:23:01.808Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.max_texture_units: 16
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2017-10-26T07:23:01.808Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2017-10-26T07:23:01.809Z - normal: Simulator: 	gl.supports_NPOT: true
+2017-10-26T07:23:01.809Z - normal: Simulator: 	gl.version: 2.1 NVIDIA-10.17.34 367.15.10.45f01
+2017-10-26T07:23:01.809Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2017-10-26T07:23:01.809Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2017-10-26T07:23:01.809Z - normal: Simulator: }
+2017-10-26T07:23:01.810Z - normal: Simulator: 
+2017-10-26T07:23:01.810Z - normal: Simulator: 
+2017-10-26T07:23:01.810Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2017-10-26T07:23:01.811Z - normal: Simulator: Project Config:
+2017-10-26T07:23:01.811Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2017-10-26T07:23:01.811Z - normal: Simulator:     writable path: $(PROJDIR)/
+2017-10-26T07:23:01.811Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2017-10-26T07:23:01.812Z - normal: Simulator:     frame size: 960 x 640
+2017-10-26T07:23:01.812Z - normal: Simulator:     frame scale: 1.00
+2017-10-26T07:23:01.812Z - normal: Simulator:     show console: NO
+2017-10-26T07:23:01.812Z - normal: Simulator:     write debug log: NO ()
+2017-10-26T07:23:01.812Z - normal: Simulator:     listen: 
+2017-10-26T07:23:01.813Z - normal: Simulator:     debugger: none
+2017-10-26T07:23:01.813Z - normal: Simulator:     add searching path:
+2017-10-26T07:23:01.813Z - normal: Simulator: 
+2017-10-26T07:23:01.813Z - normal: Simulator: 
+2017-10-26T07:23:01.815Z - normal: Simulator: 
+2017-10-26T07:23:01.815Z - normal: Simulator: ------------------------------------------------
+2017-10-26T07:23:01.815Z - normal: Simulator: LOAD Js FILE: main.js
+2017-10-26T07:23:01.815Z - normal: Simulator: ------------------------------------------------
+2017-10-26T07:23:01.925Z - normal: Simulator: Cocos2d-x-lite v1.5.2
+2017-10-26T07:23:02.085Z - normal: Simulator: (evaluatedOK == JS_FALSE)
+2017-10-26T07:23:02.085Z - normal: Simulator: /Users/splspeco/Documents/ggame/assets/script/tool/socket.io.js:4441:ReferenceError: navigator is not defined
+2017-10-26T07:23:02.086Z - normal: Simulator: 
+2017-10-26T07:23:02.086Z - normal: Simulator: Evaluating main.js failed (evaluatedOK == JS_FALSE)
+2017-10-26T07:23:02.095Z - normal: Simulator: iShow!
+2017-10-26T07:23:06.419Z - normal: Simulator: basic_object_finalize 0x17b42fd0 ...
+2017-10-26T07:23:06.428Z - normal: Simulator: basic_object_finalize 0x17b42af0 ...
+2017-10-26T07:23:06.429Z - normal: Simulator: jsbindings: finalizing JS object 0x17b42b20 (WebSocket)
+2017-10-26T07:23:06.429Z - normal: Simulator: jsbindings: finalizing JS object 0x17b42b50 (SocketIO)
+2017-10-26T07:23:06.429Z - normal: Simulator: basic_object_finalize 0x17b42be0 ...
+2017-10-26T07:23:06.429Z - normal: Simulator: basic_object_finalize 0x17b42e80 ...
+2017-10-26T07:24:14.016Z - normal: Compiled project javascript file successfully
+2017-10-26T07:24:16.692Z - normal: Simulator: WORKAREA WIDTH 1920.00, HEIGHT 970.00
+2017-10-26T07:24:16.692Z - normal: Simulator: FRAME SCALE = 1.00
+2017-10-26T07:24:16.696Z - normal: Simulator: GLFWError #65544 Happen, Cocoa: Failed to retrieve display name
+2017-10-26T07:24:16.848Z - normal: Simulator: 
+2017-10-26T07:24:16.848Z - normal: Simulator: {
+2017-10-26T07:24:16.848Z - normal: Simulator: 	gl.supports_OES_map_buffer: false
+2017-10-26T07:24:16.848Z - normal: Simulator: 	gl.supports_vertex_array_object: true
+2017-10-26T07:24:16.872Z - normal: Simulator: 	cocos2d.x.version: 1.5.2
+2017-10-26T07:24:16.872Z - normal: Simulator: 	gl.vendor: NVIDIA Corporation
+2017-10-26T07:24:16.873Z - normal: Simulator: 	gl.supports_PVRTC: false
+2017-10-26T07:24:16.873Z - normal: Simulator: 	gl.renderer: NVIDIA GeForce GTX 650 OpenGL Engine
+2017-10-26T07:24:16.873Z - normal: Simulator: 	cocos2d.x.compiled_with_profiler: false
+2017-10-26T07:24:16.874Z - normal: Simulator: 	gl.max_texture_size: 16384
+2017-10-26T07:24:16.874Z - normal: Simulator: 	gl.supports_ETC1: false
+2017-10-26T07:24:16.874Z - normal: Simulator: 	gl.supports_BGRA8888: false
+2017-10-26T07:24:16.875Z - normal: Simulator: 	cocos2d.x.build_type: DEBUG
+2017-10-26T07:24:16.875Z - normal: Simulator: 	gl.max_texture_units: 16
+2017-10-26T07:24:16.875Z - normal: Simulator: 	gl.supports_OES_packed_depth_stencil: false
+2017-10-26T07:24:16.875Z - normal: Simulator: 	gl.supports_discard_framebuffer: false
+2017-10-26T07:24:16.875Z - normal: Simulator: 	gl.supports_NPOT: true
+2017-10-26T07:24:16.876Z - normal: Simulator: 	gl.version: 2.1 NVIDIA-10.17.34 367.15.10.45f01
+2017-10-26T07:24:16.876Z - normal: Simulator: 	cocos2d.x.compiled_with_gl_state_cache: true
+2017-10-26T07:24:16.876Z - normal: Simulator: 	gl.supports_OES_depth24: false
+2017-10-26T07:24:16.876Z - normal: Simulator: }
+2017-10-26T07:24:16.876Z - normal: Simulator: 
+2017-10-26T07:24:16.876Z - normal: Simulator: 
+2017-10-26T07:24:16.877Z - normal: Simulator: cocos2d: warning, Director::setProjection() failed because size is 0
+2017-10-26T07:24:16.877Z - normal: Simulator: Project Config:
+2017-10-26T07:24:16.877Z - normal: Simulator:     project dir: /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/simulator/mac/Simulator.app/Contents/Resources/
+2017-10-26T07:24:16.877Z - normal: Simulator:     writable path: $(PROJDIR)/
+2017-10-26T07:24:16.877Z - normal: Simulator:     script file: $(PROJDIR)/main.js
+2017-10-26T07:24:16.877Z - normal: Simulator:     frame size: 960 x 640
+2017-10-26T07:24:16.878Z - normal: Simulator:     frame scale: 1.00
+2017-10-26T07:24:16.878Z - normal: Simulator:     show console: NO
+2017-10-26T07:24:16.878Z - normal: Simulator:     write debug log: NO ()
+2017-10-26T07:24:16.878Z - normal: Simulator:     listen: 
+2017-10-26T07:24:16.878Z - normal: Simulator:     debugger: none
+2017-10-26T07:24:16.878Z - normal: Simulator:     add searching path:
+2017-10-26T07:24:16.879Z - normal: Simulator: ------------------------------------------------
+2017-10-26T07:24:16.879Z - normal: Simulator: LOAD Js FILE: main.js
+2017-10-26T07:24:16.879Z - normal: Simulator: ------------------------------------------------
+2017-10-26T07:24:16.993Z - normal: Simulator: Cocos2d-x-lite v1.5.2
+2017-10-26T07:24:17.154Z - normal: Simulator: (evaluatedOK == JS_FALSE)
+2017-10-26T07:24:17.154Z - normal: Simulator: /Users/splspeco/Documents/ggame/assets/script/tool/socket.io.js:4441:ReferenceError: navigator is not defined
+2017-10-26T07:24:17.154Z - normal: Simulator: 
+2017-10-26T07:24:17.154Z - normal: Simulator: Evaluating main.js failed (evaluatedOK == JS_FALSE)
+2017-10-26T07:24:17.167Z - normal: Simulator: iShow!
+2017-10-26T07:28:05.787Z - normal: Compiled project javascript file successfully
+2017-10-26T07:28:52.018Z - normal: Compiled project javascript file successfully
+2017-10-26T07:38:13.018Z - normal: Compiled project javascript file successfully
+2017-10-26T07:38:50.507Z - normal: Compiled project javascript file successfully
+2017-10-26T07:40:36.515Z - normal: Compiled project javascript file successfully
+2017-10-26T07:55:31.497Z - normal: Compiled project javascript file successfully
+2017-10-26T08:02:49.021Z - normal: Compiled project javascript file successfully
+2017-10-26T08:05:27.015Z - normal: Compiled project javascript file successfully
+2017-10-26T08:20:32.325Z - normal: Compiled project javascript file successfully
+2017-10-26T08:28:05.132Z - normal: Compiled project javascript file successfully
+2017-10-26T08:28:22.110Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:12.578Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:17.440Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:28.679Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:34.251Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:44.487Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:50.571Z - normal: Compiled project javascript file successfully
+2017-10-26T08:30:59.783Z - normal: Compiled project javascript file successfully
+2017-10-26T08:36:46.103Z - normal: Compiled project javascript file successfully
+2017-10-26T08:37:25.000Z - normal: Compiled project javascript file successfully
+2017-10-26T08:39:08.832Z - failed: [db-task][sync-changes] Failed to import asset /Users/splspeco/Documents/ggame/assets/script/netprotocol/protocolInit.js, message: Compile error: SyntaxError: unknown: Unexpected token, expected , (12:7)
+  10 | protocol.tmRes = [];
+  11 | protocol.tmRes = [
+> 12 |     [0]:"msg_buy_res",
+     |        ^
+  13 |     [1]:"msg_login_res",
+  14 |     [2]:"msg_pvp_res",
+  15 | ];
+    at Parser.pp$5.raise (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4443:13)
+    at Parser.pp.unexpected (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1755:8)
+    at Parser.pp.expect (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:1743:33)
+    at Parser.pp$3.parseExprList (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:4285:12)
+    at Parser.pp$3.parseExprAtom (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3704:28)
+    at Parser.pp$3.parseExprSubscripts (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3484:19)
+    at Parser.pp$3.parseMaybeUnary (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3464:19)
+    at Parser.pp$3.parseExprOps (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3394:19)
+    at Parser.pp$3.parseMaybeConditional (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3371:19)
+    at Parser.pp$3.parseMaybeAssign (/Applications/CocosCreator.app/Contents/Resources/app.asar/node_modules/babylon/lib/index.js:3334:19)
+2017-10-26T08:40:05.608Z - normal: Compiled project javascript file successfully
+2017-10-26T08:44:24.354Z - normal: Compiled project javascript file successfully
+2017-10-26T08:44:43.915Z - normal: Compiled project javascript file successfully
+2017-10-26T08:54:06.729Z - normal: Compiled project javascript file successfully

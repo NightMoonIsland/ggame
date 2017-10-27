@@ -4,6 +4,7 @@ cc._RF.push(module, '50760Js5zVEuZ6lMcI/LAXJ', 'protocolHandler');
 
 "use strict";
 
+//就像lua里的Casefunc
 var _ = [];
 
 _.msg_buy_res = function (res) {};

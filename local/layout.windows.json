@@ -114,6 +114,18 @@
       "y": 218,
       "width": 500,
       "height": 722
+    },
+    "package-asset.import": {
+      "x": 735,
+      "y": 230,
+      "width": 454,
+      "height": 558
+    },
+    "code-editor": {
+      "x": 560,
+      "y": 185,
+      "width": 800,
+      "height": 622
     }
   }
 }

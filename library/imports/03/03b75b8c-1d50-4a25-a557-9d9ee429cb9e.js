@@ -12,8 +12,7 @@ function init() {
     cc.tool.viewManager = new viewManager();
     cc.tool.viewManager.init();
 
-    require("viewRegister");
-    viewRegister();
+    require("viewRegister")();
 
     var timeHandler = require("timeHandler");
     cc.tool.timeHandler = new timeHandler();
@@ -32,6 +31,17 @@ function init() {
     cc.tool.protocolInit = require("protocolInit");
     cc.tool.protocolHandler = require("protocolHandler");
     console.log("array's length = " + cc.tool.protocolInit.tmRes.length);
+
+    var array = require("array1");
+    var test = new array();
+    for (var i = 10; i < 30; i++) {
+        test.pushBack(i);
+    }
+    test.printInt();
+    test.removeWithFunc(function (data) {
+        return data < 20 && data > 15;
+    });
+    test.printInt();
 }
 
 function viewRegister() {

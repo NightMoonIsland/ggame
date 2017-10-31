@@ -7,7 +7,7 @@
   "allowRotation": true,
   "forceSquared": false,
   "powerOfTwo": true,
-  "heuristices": "BestAreaFit",
+  "heuristices": "BestShortSideFit",
   "format": "png",
   "quality": 80,
   "contourBleed": false,

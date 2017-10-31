@@ -126,6 +126,12 @@
       "y": 185,
       "width": 800,
       "height": 622
+    },
+    "project-settings": {
+      "x": 680,
+      "y": 235,
+      "width": 584,
+      "height": 548
     }
   }
 }

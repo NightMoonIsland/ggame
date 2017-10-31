@@ -48,8 +48,7 @@ cc.Class({
     // },
 
     btnTeam: function btnTeam() {
-
-        // cc.tool.viewManager.changeView("kilie5View");
+        cc.tool.viewManager.changeView("kilie5View");
     }
 });
 

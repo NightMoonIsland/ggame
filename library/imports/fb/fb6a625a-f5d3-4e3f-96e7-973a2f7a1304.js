@@ -113,13 +113,31 @@ cc.Class({
         }
     },
 
+    removeWithFunc: function removeWithFunc(func) {
+        for (var i = this.size - 1; i >= 0; i--) {
+            if (func(this.list[i])) {
+                this.remove(i);
+            }
+        }
+    },
+
     popBack: function popBack() {
         if (this.size > 0) {
             delete this.list[this.size - 1];
             this.size = this.size - 1;
         }
+    },
+
+    printInt: function printInt() {
+        for (var i = 0; i < this.size; i++) {
+            console.log("index " + i + " = " + this.list[i]);
+        }
     }
 
+    // called every frame, uncomment this function to activate update callback
+    // update: function (dt) {
+
+    // },
 });
 
 cc._RF.pop();

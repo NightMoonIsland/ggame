@@ -41,6 +41,14 @@ cc.Class({
         this.eventListener[eventType].pushBack({target:target, func:func});
     },
 
+    removeEventListener: function(eventType, target, func){
+        if(this.eventListener[eventType]){
+            this.eventListener[eventType].removeWithFunc(function(data){
+                return data.target == target;
+            });
+        }
+    },
+
     testWorkListener: function() {
         console.log("to test listener");
         for(var key in this.eventListener["hahaha"]){

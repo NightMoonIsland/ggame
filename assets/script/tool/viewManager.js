@@ -70,7 +70,7 @@ cc.Class({
         var idx = this.viewList.find(viewName);
         if(idx != this.viewList.npos){
             var len = this.viewList.getSize() - idx;
-            this.viewList.remove(idx, len);
+            this.viewList.remove(idx + 1, len - 1);
         }
         else{
             this.viewList.pushBack(viewName);

@@ -4,6 +4,8 @@ cc._RF.push(module, '977ccDhLh1BToFB9khDpdNi', 'timeHandler');
 
 "use strict";
 
+var timerCount = 0;
+
 cc.Class({
     extends: cc.Component,
 
@@ -18,17 +20,31 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        count: 0
-    },
+        self: cc.Component },
 
     // use this for initialization
-    onLoad: function onLoad() {},
 
-    ctor: function ctor() {
-        console.log("zenm ehuizheyang");
-        this.schedule(function () {
-            console.log("hahahahahha");
-        }, 1);
+    ctor: function ctor() {},
+
+    init: function init(self) {
+        this.self = self;
+    },
+
+    updateTimer: function updateTimer() {
+        timerCount = timerCount + 1;
+        console.log("wo ca");
+        console.log("test Work = " + timerCount);
+    },
+
+    startTimer: function startTimer() {
+        timerCount = 0;
+        this.self.schedule(this.updateTimer, 1);
+    },
+
+    stopTimer: function stopTimer() {
+        timerCount = 0;
+        console.log("停下!!");
+        this.self.unschedule(this.updateTimer);
     },
 
     dosomething: function dosomething() {

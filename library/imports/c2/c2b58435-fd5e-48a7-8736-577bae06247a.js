@@ -51,9 +51,6 @@ cc.Class({
 
     init: function init() {
         this.viewInfo = [];
-        console.log("to this 1");
-        this.viewInfo["haha"] = { a: 1, b: 2 };
-        console.log("to this 2");
     },
 
     registView: function registView(viewName, module, title) {
@@ -67,13 +64,11 @@ cc.Class({
         }
 
         var viewAbout = this.viewInfo[viewName];
-        console.log("wocao 1");
-        console.log("wocao 2");
 
         var idx = this.viewList.find(viewName);
         if (idx != this.viewList.npos) {
             var len = this.viewList.getSize() - idx;
-            this.viewList.remove(idx, len);
+            this.viewList.remove(idx + 1, len - 1);
         } else {
             this.viewList.pushBack(viewName);
         }
@@ -86,6 +81,7 @@ cc.Class({
             cc.director.getScene().getChildByName("Canvas").addChild(root);
             if (self.view != null) {
                 self.view.removeFromParent();
+                self.view.destroy();
                 self.view = null;
             }
             self.view = root;
@@ -127,9 +123,10 @@ cc.Class({
             if (viewAbout == null) {
                 if (this.view != null) {
                     this.view.removeFromParent();
+                    this.view.destroy();
+                    this.view = null;
                 }
                 this.viewName = null;
-                this.view = null;
                 return null;
             }
 
@@ -139,6 +136,7 @@ cc.Class({
                 cc.director.getScene().getChildByName("Canvas").addChild(root);
                 if (self.view != null) {
                     self.view.removeFromParent();
+                    self.view.destroy();
                     self.view = null;
                 }
                 self.view = root;

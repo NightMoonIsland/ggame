@@ -66,7 +66,8 @@ cc.Class({
 
     remove: function remove(pos, len) {
         if (pos < 0) pos = 0;
-        if (len == null || len <= 0) {
+        if (len == 0) return;
+        if (len == null || len < 0) {
             len = 1;
         }
         if (pos < this.size) {

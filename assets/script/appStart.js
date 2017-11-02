@@ -1,44 +1,37 @@
-function init(){
+function init(self){
     cc.tool = {}
-    var viewManager = require("viewManager");
-    cc.tool.viewManager = new viewManager();
-    cc.tool.viewManager.init();
 
+    cc.tool.viewManager = new (require("viewManager"))();
+    cc.tool.viewManager.init();
     require("viewRegister")();
 
-    var timeHandler = require("timeHandler");
-    cc.tool.timeHandler = new timeHandler();
-
-    var eventManager = require("eventManager");
-    cc.tool.eventManager = new eventManager();
+    cc.tool.eventManager = new (require("eventManager"))();
 
     cc.tool.gameVariable = require("gameVariable");
     cc.tool.Lang = require("langZh");
-
-    cc.tool.prefab = {};
-    // cc.tool.viewManager.registView("hahaha", "hehehe", "hihihi");
 
     cc.tool.config = require("config");
 
     cc.tool.protocolInit = require("protocolInit");
     cc.tool.protocolHandler = require("protocolHandler");
-    console.log("array's length = " + cc.tool.protocolInit.tmRes.length);
 
-    var array = require("array1");
-    var test = new array();
-    for(var i = 10; i < 30; i++){
-        test.pushBack(i);
-    }
-    test.printInt();
-    test.removeWithFunc(function(data){
-        return data < 20 && data > 15;
-    });
-    test.printInt();
-}
+    cc.tool.timeHandler = new (require("timeHandler"))();
+    cc.tool.timeHandler.init(self);
 
-function viewRegister(){
-    cc.tool.viewManager.registView("kmView", "ui/kmView", 2);
-    cc.tool.viewManager.registView("kilie5View", "ui/kilie5View", 2);
+
+    // var array = require("array1");
+    // var test = new array();
+
+    // var test = new (require("array1"))();
+
+    // for(var i = 10; i < 30; i++){
+    //     test.pushBack(i);
+    // }
+    // test.printInt();
+    // test.removeWithFunc(function(data){
+    //     return data < 20 && data > 15;
+    // });
+    // test.printInt();
 }
 
 cc.Class({
@@ -61,7 +54,8 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        init();
+        var self = this;
+        init(self);
 
         // var self = this;
         // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
@@ -90,8 +84,6 @@ cc.Class({
         // this.schedule(function(){
         //     this.updateTime();
         // }, 1);
-
-        this.testFunc();
     },
 
     updateTime: function() {
@@ -137,5 +129,13 @@ cc.Class({
             socket.on(cc.tool.protocolInit.tmRes[i], cc.tool.protocolHandler[cc.tool.protocolInit.tmRes[i]]);
         }
         socket.emit('hehehaha', {abc:"wozhenderilegoule"});
+    },
+
+    startT: function(){
+        cc.tool.timeHandler.startTimer();
+    },
+
+    stopT: function(){
+        cc.tool.timeHandler.stopTimer();
     },
 });

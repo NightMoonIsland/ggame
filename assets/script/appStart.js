@@ -57,6 +57,9 @@ cc.Class({
         var self = this;
         init(self);
 
+        // var listview = new (require("ListView0"))()
+        // this.node.addChild(listview.node);
+
         // var self = this;
         // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
         //     // cc.tool.prefab.listView = prefab;

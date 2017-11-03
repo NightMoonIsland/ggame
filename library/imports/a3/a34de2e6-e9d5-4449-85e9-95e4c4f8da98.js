@@ -23,25 +23,29 @@ cc.Class({
     // use this for initialization
     onLoad: function onLoad() {
         console.log("is Loaded");
-        // this.node.on('touchstart', function(event){
-        //     console.log("mouse down");
-        //     event.stopPropagation();
-        // }, this);
+        var self = this;
+        this.node.on('touchstart', function (event) {
+            console.log("mouse down" + event.getLocationX() + " --- " + event.getLocationY());
+            var pos = self.node.convertToNodeSpace(event.getLocation());
+            console.log("local position = " + pos.x + " _ _ " + pos.y);
+            event.stopPropagation();
+        }, this);
 
-        // this.node.on('touchend', function(event){
-        //     console.log("mouse up");
-        //     event.stopPropagation();
-        // }, this);
+        this.node.on('touchend', function (event) {
+            console.log("mouse up");
+            event.stopPropagation();
+        }, this);
 
         // this.node.on('mousemove', function(event){
-        //     console.log("move");
+        //     var delta = event.getDelta();
+        //     console.log(delta.x + "-----" + delta.y);
         //     event.stopPropagation();
         // }, this);
 
-        // this.node.on('mouseleave', function(event){
-        //     console.log("leave");
-        //     event.stopPropagation();
-        // }, this);
+        this.node.on('mouseleave', function (event) {
+            console.log("leave");
+            event.stopPropagation();
+        }, this);
     },
 
     ctor: function ctor() {

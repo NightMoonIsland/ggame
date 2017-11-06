@@ -1,1 +1,0 @@
-{"version":3,"sources":["assets/script/variable/gameVariable.js"],"names":["gameVar","sec","module","exports"],"mappings":";;;;;;AAAA,IAAIA,UAAU,EAAd;;AAEAA,QAAQC,GAAR,GAAc,CAAd;;AAEAC,OAAOC,OAAP,GAAiBH,OAAjB","file":"unknown","sourcesContent":["var gameVar = [];\n\ngameVar.sec = 0;\n\nmodule.exports = gameVar;"]}

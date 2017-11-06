@@ -57,8 +57,7 @@ cc.Class({
         var self = this;
         init(self);
 
-        // var listview = new (require("ListView0"))()
-        // this.node.addChild(listview.node);
+        
 
         // var self = this;
         // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
@@ -115,7 +114,9 @@ cc.Class({
     },
 
     btnBack: function() {
-        cc.tool.viewManager.backPreview();
+        var listview = new (require("RectContainer"))();
+        this.node.addChild(listview.node);
+        // cc.tool.viewManager.backPreview();
     },
 
     // called every frame, uncomment this function to activate update callback

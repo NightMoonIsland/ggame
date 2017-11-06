@@ -22,24 +22,65 @@ cc.Class({
         this.moveSpeed = 0;
 
         this.node = new cc.Node();
+        this.node.addComponent(cc.Sprite);
         this.node.addComponent(cc.Layout);
+        // this.node.width = 120;
+        // this.node.height = 120;
+        // sprite.spriteFrame = "default-panel";
+        
 
         console.log(this.node.height + "---" + this.node.width);
+
+        
         this.node.on('touchstart', function(event){
-            console.log("mouse down");
+            self.onTouchBegan(event);
+            event.stopPropagation();
+        }, this);
+
+        this.node.on('touchmove', function(event){
+            self.onTouchMoved(event);
             event.stopPropagation();
         }, this);
 
         this.node.on('touchend', function(event){
-            
-            console.log("mouse up");
+            self.onTouchEnded(event);
             event.stopPropagation();
         }, this);
     },
 
+    onTouchBegan: function(event) {
+        console.log("mouse down");
+    },
+
+    onTouchMoved: function(event) {
+        console.log("mouse moved!!");
+        this.delta = event.getDelta();
+        this.moveBy();
+    },
+
+    onTouchEnded:function(event) {
+        console.log("mouse up");
+    },
+
+    moveTo: function(x, y){
+
+    },
+
+    moveBy: function(x, y){
+        this.cx = this.cx - x;
+        this.cy = this.cy + y;
+    },
+
     setRectangle: function(width, height) {
-        this.node.width = width;
-        this.node.height = height;
+        var self = this;
+        cc.loader.loadRes("pic/test", cc.SpriteFrame, function (err, spriteFrame) {
+            self.node.getComponent(cc.Sprite).spriteFrame = spriteFrame;
+            self.node.getComponent(cc.Sprite).type = cc.Sprite.Type.SIMPLE;
+            self.node.width = width;
+            self.node.height = height;
+        });
+        this.node.color = new cc.Color(255, 255, 255);
+        
     },
 
     moveTo: function(x, y) {
@@ -50,6 +91,10 @@ cc.Class({
 
     moveBy: function(x, y) {
 
+    },
+
+    removeAllChildren: function() {
+        this.node.removeAllChildren();
     },
 
     // use this for initialization

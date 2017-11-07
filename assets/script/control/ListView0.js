@@ -13,14 +13,9 @@ cc.Class({
     },
 
     ctor: function() {
-        this.node = new cc.Node();
-        this.node.addComponent(cc.Layout);
-
-        console.log(this.node.height + "---" + this.node.width);
-
-        var self = this;
-        this.container = new (require("RectContainer"))();
-        this.container.handler = self;
+        // var self = this;
+        // this.container = new (require("RectContainer"))();
+        // this.container.handler = self;
     },
 
     create: function(dir, lines, hgap, vgap, width, height) {
@@ -36,7 +31,7 @@ cc.Class({
         this.container.handler = self;
         this.container.setRectangle(width, height)
 
-        if(dir == cc.tool.config.VERTICAL){
+        if(dir == cc.tool.config.Direction.VERTICAL){
             var self = this;
             this.getStartIdx = function(self){
                 if(self.dp == null || self.dp.getSize() == 0)
@@ -55,7 +50,7 @@ cc.Class({
                 return endIdx;
             }
         }
-        else if(dir == cc.tool.config.HORIZONTAL){
+        else if(dir == cc.tool.config.Direction.HORIZONTAL){
             var self = this;
             this.getStartIdx = function(self){
                 if(self.dp == null || self.dp.getSize() == 0)
@@ -101,6 +96,47 @@ cc.Class({
         this.startIdx = null;
         this.endIdx = null;
         this.container.removeAllChildren();
+
+        var num = Math.ceil(dp.getSize() / this.lines);
+        if(this.dir == cc.tool.config.Direction.VERTICAL){
+            this.container.innerWidth = this.itemWidth * this.lines + this.hgap * (this.lines - 1);
+            this.container.innerHeight = this.itemHeight * num + this.vgap * (num - 1);
+        }
+        else{
+            this.container.innerWidth = this.itemWidth * num + this.hgap * (num - 1);
+            this.container.innerHeight = this.itemHeight * this.lines + this.vgap * (this.lines - 1);
+        }
+        this.selectIdx = Math.min(this.selectIdx, dp.getSize());
+    },
+
+    updateView: function() {
+        var self        =   this;
+        var startIdx    =   this.getStartIdx(self);
+        var endIdx      =   this.getendIdx(self);
+
+        if(startIdx == 0 && endIdx == 0){
+            this.container.removeAllChildren();
+            return;
+        }
+
+        var childIdx = 1;
+        var renderer = null;
+        var renderers = this.container.getChildren();
+
+        if(this.startIdx != startIdx || this.endIdx != endIdx){
+            this.startIdx = startIdx;
+            this.endIdx = endIdx;
+
+            var childNum = renderers.length;
+            for(var i = startIdx; i <= endIdx; i++){
+                if(childIdx < childNum){
+                    renderer = renderers[childIdx];
+                    var rendererComp = renderer.getComponent('xxxRenderer');
+                }
+                renderer = renderers[i];
+                var prefab = cc.loader.getRes(self.newItem, cc.Prefab);
+            }
+        }
     },
 
     // use this for initialization

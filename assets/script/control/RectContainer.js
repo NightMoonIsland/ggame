@@ -27,7 +27,6 @@ cc.Class({
         // this.node.width = 120;
         // this.node.height = 120;
         // sprite.spriteFrame = "default-panel";
-        
 
         console.log(this.node.height + "---" + this.node.width);
 
@@ -50,25 +49,38 @@ cc.Class({
 
     onTouchBegan: function(event) {
         console.log("mouse down");
+        var self = this;
+        this.unscheduleUpdate(self);
     },
 
     onTouchMoved: function(event) {
         console.log("mouse moved!!");
         this.delta = event.getDelta();
-        this.moveBy();
+        this.moveBy(this.delta.x, this.delta.y);
     },
 
     onTouchEnded:function(event) {
         console.log("mouse up");
+        var self = this;
+        this.scheduleUpdate(self, 0, false, function(dt){
+            self.update(dt);
+        })
     },
 
     moveTo: function(x, y){
-
+        if(this.cx != x || this.cy != y){
+            this.cx = Math.max(0, Math.min(x, this.innerWidth - this.node.width));
+            this.cy = Math.max(0, Math.min(y, this.innerHeight - this.node.height));
+            this.handler.updateView();
+        }
     },
 
     moveBy: function(x, y){
         this.cx = this.cx - x;
         this.cy = this.cy + y;
+        this.cx = Math.max(0, Math.min(this.cx, this.innerWidth - this.node.width));
+        this.cy = Math.max(0, Math.min(this.cy, this.innerHeight - this.node.height));
+        this.handler.updateView();
     },
 
     setRectangle: function(width, height) {
@@ -83,23 +95,33 @@ cc.Class({
         
     },
 
-    moveTo: function(x, y) {
-        if(this.cx != x || this.cy != y){
-            // this.cx = Math.max(0, Math.min())
-        }
-    },
-
-    moveBy: function(x, y) {
-
+    getChildren: function() {
+        return this.node.children;
     },
 
     removeAllChildren: function() {
         this.node.removeAllChildren();
     },
 
-    // use this for initialization
-    onLoad: function () {
+    update: function(dt){
+        this.moveSpeed = this.moveSpeed * 0.95;
+        var self = this;
+        if(Math.abs(this.moveSpeed) < 1){
+            this.unscheduleUpdate(self);
+        }
 
+        if(this.moveDir == cc.tool.config.Direction.VERTICAL){
+            this.moveBy(0, this.moveSpeed);
+            if((this.cy >= this.innerHeight - this.node.height) ||
+                this.cy <= 0)
+                this.unscheduleUpdate(self);
+        }
+        else{
+            this.moveBy(this.moveSpeed, 0);
+            if((this.cx >= this.innerWidth - this.width) || 
+                this.cx <= 0)
+                this.unscheduleUpdate(self);
+        }
     },
 
     // called every frame, uncomment this function to activate update callback

@@ -114,9 +114,22 @@ cc.Class({
     },
 
     btnBack: function() {
-        var listview = new (require("RectContainer"))();
-        this.node.addChild(listview.node);
+        // var listview = new (require("RectContainer"))();
+        // this.node.addChild(listview.node);
         // cc.tool.viewManager.backPreview();
+
+        var test = new (require("array1"))()
+        for(var i = 0; i < 30; i++){
+            var data = {};
+            data.num = i;
+            test.pushBack(data);
+        }
+
+        var listview = new (require("ListView0"))();
+        listview.create(cc.tool.config.Direction.VERTICAL, 2, 2, 2, 205, 222);
+        listview.setItemModel("ui/xxxRenderer", 100, 20);
+        listview.setDataProvider(test);
+        listview.addTo(this.node);
     },
 
     // called every frame, uncomment this function to activate update callback

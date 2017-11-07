@@ -19,6 +19,11 @@ cc.Class({
 
     },
 
+    setData: function(data, index) {
+        var label = this.node.getChildByName("txtName").getComponent(cc.Label);
+        label.string = "no = " + data.num;
+    }
+
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {
 

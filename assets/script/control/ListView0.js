@@ -28,7 +28,7 @@ cc.Class({
 
         var self = this;
         this.container = new (require("RectContainer"))();
-        this.container.handler = self;
+        this.container.setHandler(self);
         this.container.setRectangle(width, height)
 
         if(dir == cc.tool.config.Direction.VERTICAL){
@@ -37,7 +37,7 @@ cc.Class({
                 if(self.dp == null || self.dp.getSize() == 0)
                     return 0;
 			    var interval = self.itemHeight + self.vgap;
-			    var startLine = Math.floor(self.container.cy / interval);
+			    var startLine = Math.floor(self.container.getCy() / interval);
 			    var startIdx = startLine * self.lines + 1;
                 return startIdx;
             }
@@ -45,8 +45,13 @@ cc.Class({
                 if(self.dp == null || self.dp.getSize() == 0)
                     return 0;
 			    var interval = self.itemHeight + self.vgap;
-			    var endLine = Math.ceil((self.container.cy + self.height) / interval);
+			    var endLine = Math.ceil((self.container.getCy() + self.height) / interval);
 			    var endIdx = Math.min(endLine * self.lines, self.dp.getSize());
+                console.log("self.container.getCy() = " + self.container.getCy());
+                console.log("self.height = " + self.height);
+                console.log("endLine = " + endLine);
+                console.log("self.lines = " + self.lines);
+                console.log("endIdx = " + endIdx);
                 return endIdx;
             }
         }
@@ -56,7 +61,7 @@ cc.Class({
                 if(self.dp == null || self.dp.getSize() == 0)
                     return 0;
 			    var interval = self.itemWidth + self.vgap;
-			    var startLine = Math.floor(self.container.cx / interval)
+			    var startLine = Math.floor(self.container.getCx() / interval)
 			    var startIdx = startLine * self.lines + 1;
                 return startIdx;
             }
@@ -64,7 +69,7 @@ cc.Class({
                 if(self.dp == null || self.dp.getSize() == 0)
                     return 0;
 			    var interval = self.itemWidth + self.vgap;
-			    var endLine = Math.ceil((self.container.cx + self.width) / interval)
+			    var endLine = Math.ceil((self.container.getCx() + self.width) / interval)
 			    var endIdx = Math.min(endLine * self.lines, self.dp.getSize());
                 return endIdx;
             }
@@ -78,19 +83,22 @@ cc.Class({
 	    this.itemHeight = itemHeight
     },
 
-    addTo: function(parent, pos) {
-
+    addTo: function(parent) {
+        parent.addChild(this.container.node);
     },
 
     setDataProvider: function(dp) {
         if(!dp){
-
+            this.dp = null;
+            this.selectIdx = 0;
+            this.container.setPositionC(0, 0);
+            this.container.removeAllChildren();
+            return
         }
         if(this.dp != dp){
             this.dp = dp;
             this.selectIdx = 0;
-            this.container.cx = 0;
-            this.container.cy = 0;
+            this.container.setPositionC(0, 0);
         }
 
         this.startIdx = null;
@@ -99,49 +107,87 @@ cc.Class({
 
         var num = Math.ceil(dp.getSize() / this.lines);
         if(this.dir == cc.tool.config.Direction.VERTICAL){
-            this.container.innerWidth = this.itemWidth * this.lines + this.hgap * (this.lines - 1);
-            this.container.innerHeight = this.itemHeight * num + this.vgap * (num - 1);
+            // this.container.innerWidth = this.itemWidth * this.lines + this.hgap * (this.lines - 1);
+            // this.container.innerHeight = this.itemHeight * num + this.vgap * (num - 1);
+            this.container.setInnerRectangle(this.itemWidth * this.lines + this.hgap * (this.lines - 1),
+                            this.itemHeight * num + this.vgap * (num - 1));
         }
         else{
-            this.container.innerWidth = this.itemWidth * num + this.hgap * (num - 1);
-            this.container.innerHeight = this.itemHeight * this.lines + this.vgap * (this.lines - 1);
+            this.container.setInnerRectangle(this.itemWidth * num + this.hgap * (num - 1),
+                            this.itemHeight * this.lines + this.vgap * (this.lines - 1));
+            // this.container.innerWidth = this.itemWidth * num + this.hgap * (num - 1);
+            // this.container.innerHeight = this.itemHeight * this.lines + this.vgap * (this.lines - 1);
         }
         this.selectIdx = Math.min(this.selectIdx, dp.getSize());
+        // this.updateView();
     },
 
     updateView: function() {
         var self        =   this;
         var startIdx    =   this.getStartIdx(self);
-        var endIdx      =   this.getendIdx(self);
+        var endIdx      =   this.getEndIdx(self);
+
+        console.log("startIdx = " + startIdx);
+        console.log("endIdx = " + endIdx);
 
         if(startIdx == 0 && endIdx == 0){
             this.container.removeAllChildren();
             return;
         }
 
-        var childIdx = 1;
+        var childIdx = 0;
         var renderer = null;
         var renderers = this.container.getChildren();
+        console.log("renderers.length = " + renderers.length);
 
         if(this.startIdx != startIdx || this.endIdx != endIdx){
             this.startIdx = startIdx;
             this.endIdx = endIdx;
 
             var childNum = renderers.length;
-            for(var i = startIdx; i <= endIdx; i++){
+            for(var i = startIdx - 1; i <= endIdx - 1; i++){
                 if(childIdx < childNum){
-                    renderer = renderers[childIdx];
-                    var rendererComp = renderer.getComponent('xxxRenderer');
+                    renderer = renderers[childIdx].getComponent('xxxRenderer');
                 }
-                renderer = renderers[i];
-                var prefab = cc.loader.getRes(self.newItem, cc.Prefab);
+                else{
+                    var prefab = cc.loader.getRes(this.newItem, cc.Prefab);
+                    let item = cc.instantiate(prefab);
+                    if(!item) console.log("wocao zenmehuizheyang");
+                    renderer = item.getComponent('xxxRenderer');
+                    this.container.getNode().addChild(item);
+                    renderers[childIdx] = item;
+                }
+                renderer.setData(this.dp.at(i), childIdx);
+                childIdx = childIdx + 1;
             }
         }
-    },
 
-    // use this for initialization
-    onLoad: function () {
+        for(var i = childIdx; i < childNum; i++){
+            renderer = renderers[childIdx].getComponent('xxxRenderer');
+        }
 
+        childIdx = 0;
+        renderers = this.container.getChildren();
+        var r = 0, c = 0, posx = 0, posy = 0;
+        for(var i = startIdx - 1; i <= endIdx - 1; i++){
+            //renderer = renderers[childIdx].getComponent('xxxRenderer');
+
+            if(this.dir == cc.tool.config.Direction.VERTICAL){
+                r = Math.floor(i / this.lines);
+                c = i % this.lines;
+            }
+            else{
+                r = i % this.lines;
+                c = Math.floor(i / this.lines);
+            }
+            posx = c * (this.itemWidth + this.hgap);
+            posy = r * (this.itemHeight + this.vgap) + this.itemHeight;
+
+            posx = posx - this.container.getCx();
+            posy = this.height - (posy - this.container.getCy());
+            renderers[childIdx].setPosition(cc.v2(posx, posy));
+            childIdx = childIdx + 1;
+        }
     },
 
     // called every frame, uncomment this function to activate update callback

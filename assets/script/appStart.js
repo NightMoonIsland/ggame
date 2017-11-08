@@ -110,7 +110,7 @@ cc.Class({
     },
 
     testRemove: function() {
-        cc.tool.viewManager.changeView("kmView");
+        // cc.tool.viewManager.changeView("kmView");
     },
 
     btnBack: function() {

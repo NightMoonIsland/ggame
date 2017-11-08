@@ -1,5 +1,6 @@
 
-
+var ZORDER_VIEW = 2;
+var ZORDER_BOX = 3;
 cc.Class({
     properties: {
         // foo: {
@@ -144,5 +145,10 @@ cc.Class({
             return this.view;
         }
         return null;
+    },
+
+    addBox: function(box, z = ZORDER_BOX){
+        // cc.director.getScene().
+        var box = new (require("testBox"))();
     },
 });

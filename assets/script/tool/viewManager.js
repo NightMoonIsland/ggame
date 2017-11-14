@@ -1,6 +1,9 @@
 
+var ZORDER_BG = 0;
+var ZORDER_ROOT = 1;
 var ZORDER_VIEW = 2;
 var ZORDER_BOX = 3;
+
 cc.Class({
     properties: {
         // foo: {

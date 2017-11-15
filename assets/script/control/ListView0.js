@@ -44,14 +44,11 @@ cc.Class({
             this.getEndIdx = function(self){
                 if(self.dp == null || self.dp.getSize() == 0)
                     return 0;
+
 			    var interval = self.itemHeight + self.vgap;
 			    var endLine = Math.ceil((self.container.getCy() + self.height) / interval);
 			    var endIdx = Math.min(endLine * self.lines, self.dp.getSize());
-                console.log("self.container.getCy() = " + self.container.getCy());
-                console.log("self.height = " + self.height);
-                console.log("endLine = " + endLine);
-                console.log("self.lines = " + self.lines);
-                console.log("endIdx = " + endIdx);
+
                 return endIdx;
             }
         }
@@ -78,7 +75,10 @@ cc.Class({
 
     setItemModel: function(item, itemWidth, itemHeight) {
         this.newItem = item;
-        cc.loader.loadRes(this.newItem);
+        var self = this;
+        cc.loader.loadRes(this.newItem, cc.prefab, function(){
+            self.updateView();
+        });
 	    this.itemWidth = itemWidth
 	    this.itemHeight = itemHeight
     },
@@ -106,29 +106,20 @@ cc.Class({
         this.container.removeAllChildren();
 
         var num = Math.ceil(dp.getSize() / this.lines);
-        if(this.dir == cc.tool.config.Direction.VERTICAL){
-            // this.container.innerWidth = this.itemWidth * this.lines + this.hgap * (this.lines - 1);
-            // this.container.innerHeight = this.itemHeight * num + this.vgap * (num - 1);
+        if(this.dir == cc.tool.config.Direction.VERTICAL)
             this.container.setInnerRectangle(this.itemWidth * this.lines + this.hgap * (this.lines - 1),
                             this.itemHeight * num + this.vgap * (num - 1));
-        }
-        else{
+        else
             this.container.setInnerRectangle(this.itemWidth * num + this.hgap * (num - 1),
                             this.itemHeight * this.lines + this.vgap * (this.lines - 1));
-            // this.container.innerWidth = this.itemWidth * num + this.hgap * (num - 1);
-            // this.container.innerHeight = this.itemHeight * this.lines + this.vgap * (this.lines - 1);
-        }
         this.selectIdx = Math.min(this.selectIdx, dp.getSize());
-        // this.updateView();
+        this.updateView();
     },
 
     updateView: function() {
         var self        =   this;
         var startIdx    =   this.getStartIdx(self);
         var endIdx      =   this.getEndIdx(self);
-
-        console.log("startIdx = " + startIdx);
-        console.log("endIdx = " + endIdx);
 
         if(startIdx == 0 && endIdx == 0){
             this.container.removeAllChildren();
@@ -138,7 +129,9 @@ cc.Class({
         var childIdx = 0;
         var renderer = null;
         var renderers = this.container.getChildren();
-        console.log("renderers.length = " + renderers.length);
+
+        var prefab = cc.loader.getRes(this.newItem, cc.Prefab);
+        if(!prefab) return;
 
         if(this.startIdx != startIdx || this.endIdx != endIdx){
             this.startIdx = startIdx;
@@ -150,9 +143,7 @@ cc.Class({
                     renderer = renderers[childIdx].getComponent('xxxRenderer');
                 }
                 else{
-                    var prefab = cc.loader.getRes(this.newItem, cc.Prefab);
                     let item = cc.instantiate(prefab);
-                    if(!item) console.log("wocao zenmehuizheyang");
                     renderer = item.getComponent('xxxRenderer');
                     this.container.getNode().addChild(item);
                     renderers[childIdx] = item;
@@ -188,6 +179,10 @@ cc.Class({
             renderers[childIdx].setPosition(cc.v2(posx, posy));
             childIdx = childIdx + 1;
         }
+    },
+
+    addEventListener: function(callback){
+        this.callback = callback;
     },
 
     // called every frame, uncomment this function to activate update callback

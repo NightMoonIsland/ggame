@@ -110,7 +110,22 @@ cc.Class({
     },
 
     testRemove: function() {
-        cc.tool.viewManager.changeView("kmView");
+        let text = this.node.getChildByName("paomadeng").getChildByName("hello");
+        text.setPosition(cc.p(400, 0));
+        var seq = cc.sequence(cc.callFunc(function(){
+                                    console.log("AAAAAA");
+                                }),
+                                cc.moveTo(1, cc.p(0, 0)), 
+                                cc.callFunc(function(){
+                                    console.log("BBBBBB");
+                                }),
+                                cc.delayTime(1), 
+                                cc.moveTo(1, cc.p(-400, 0)));
+                                cc.callFunc(function(){
+                                    console.log("CCCCCC");
+                                }),
+        text.runAction(seq);
+        // cc.tool.viewManager.changeView("kmView");
     },
 
     btnBack: function() {

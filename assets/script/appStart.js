@@ -110,26 +110,26 @@ cc.Class({
     },
 
     testRemove: function() {
-        // cc.tool.viewManager.changeView("kmView");
+        cc.tool.viewManager.changeView("kmView");
     },
 
     btnBack: function() {
-        // var listview = new (require("RectContainer"))();
-        // this.node.addChild(listview.node);
-        // cc.tool.viewManager.backPreview();
+        var listview = new (require("RectContainer"))();
+        this.node.addChild(listview.node);
+        cc.tool.viewManager.backPreview();
 
-        var test = new (require("array1"))()
-        for(var i = 0; i < 30; i++){
-            var data = {};
-            data.num = i;
-            test.pushBack(data);
-        }
+        // var test = new (require("array1"))()
+        // for(var i = 0; i < 30; i++){
+        //     var data = {};
+        //     data.num = i;
+        //     test.pushBack(data);
+        // }
 
-        var listview = new (require("ListView0"))();
-        listview.create(cc.tool.config.Direction.VERTICAL, 2, 2, 2, 205, 222);
-        listview.setItemModel("ui/xxxRenderer", 100, 20);
-        listview.setDataProvider(test);
-        listview.addTo(this.node);
+        // var listview = new (require("ListView0"))();
+        // listview.create(cc.tool.config.Direction.VERTICAL, 2, 2, 2, 205, 222);
+        // listview.setItemModel("ui/xxxRenderer", 100, 20);
+        // listview.setDataProvider(test);
+        // listview.addTo(this.node);
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -138,14 +138,20 @@ cc.Class({
     // },
 
     connectTest: function() {
-        console.log("work connect");
-        var socket = io.connect('10.10.30.234:12345', function(msg){
-            console.log(msg);
+        // console.log("work connect");
+        // var socket = io.connect('10.10.30.234:12345', function(msg){
+        //     console.log(msg);
+        // });
+        // for(var i = 0; i < cc.tool.protocolInit.tmRes.length; i++){
+        //     socket.on(cc.tool.protocolInit.tmRes[i], cc.tool.protocolHandler[cc.tool.protocolInit.tmRes[i]]);
+        // }
+        // socket.emit('hehehaha', {abc:"wozhenderilegoule"});
+
+        var self = this;
+        cc.loader.loadRes("ui/ceshiBox", cc.prefab, function(err, prefab){
+            let box = cc.instantiate(prefab);
+            self.node.addChild(box);
         });
-        for(var i = 0; i < cc.tool.protocolInit.tmRes.length; i++){
-            socket.on(cc.tool.protocolInit.tmRes[i], cc.tool.protocolHandler[cc.tool.protocolInit.tmRes[i]]);
-        }
-        socket.emit('hehehaha', {abc:"wozhenderilegoule"});
     },
 
     startT: function(){

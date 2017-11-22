@@ -19,6 +19,10 @@ function init(self){
     cc.tool.timeHandler.init(self);
 
 
+    cc.loader.loadRes("ui/TopLayer", cc.prefab, function(err, prefab){
+        let layer = cc.instantiate(prefab);
+        cc.director.getScene().addChild(layer, 4);
+    });
     // var array = require("array1");
     // var test = new array();
 

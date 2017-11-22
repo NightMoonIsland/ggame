@@ -19,6 +19,9 @@ cc.Class({
         this.node.on('mousedown', function (event) {
             console.log('Mouse down');
         }, this);
+        this.node.on('touchend', function(event){
+            
+        }, this);
     },
 
     // called every frame, uncomment this function to activate update callback

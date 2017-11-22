@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "35e47acf-986d-4469-b395-5dcf16348c3e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "sakura_flower": {
+      "ver": "1.0.3",
+      "uuid": "d23e889f-dfcd-4594-8b5a-f4f6d65a3d24",
+      "rawTextureUuid": "35e47acf-986d-4469-b395-5dcf16348c3e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0,
+      "trimX": 5,
+      "trimY": 5,
+      "width": 182,
+      "height": 177,
+      "rawWidth": 193,
+      "rawHeight": 187,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

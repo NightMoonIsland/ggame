@@ -21,8 +21,9 @@ function init(self){
 
     cc.loader.loadRes("ui/TopLayer", cc.prefab, function(err, prefab){
         let layer = cc.instantiate(prefab);
-        cc.director.getScene().addChild(layer, 4);
+        cc.director.getScene().addChild(layer);
     });
+
     // var array = require("array1");
     // var test = new array();
 
@@ -61,7 +62,9 @@ cc.Class({
         var self = this;
         init(self);
 
-        
+        this.node.on('touchstart', function (event) {
+            console.log('反对舒服的沙发上');
+        }, this);
 
         // var self = this;
         // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
@@ -114,22 +117,22 @@ cc.Class({
     },
 
     testRemove: function() {
-        let text = this.node.getChildByName("paomadeng").getChildByName("hello");
-        text.setPosition(cc.p(400, 0));
-        var seq = cc.sequence(cc.callFunc(function(){
-                                    console.log("AAAAAA");
-                                }),
-                                cc.moveTo(1, cc.p(0, 0)), 
-                                cc.callFunc(function(){
-                                    console.log("BBBBBB");
-                                }),
-                                cc.delayTime(1), 
-                                cc.moveTo(1, cc.p(-400, 0)));
-                                cc.callFunc(function(){
-                                    console.log("CCCCCC");
-                                }),
-        text.runAction(seq);
-        // cc.tool.viewManager.changeView("kmView");
+        // let text = this.node.getChildByName("paomadeng").getChildByName("hello");
+        // text.setPosition(cc.p(400, 0));
+        // var seq = cc.sequence(cc.callFunc(function(){
+        //                             console.log("AAAAAA");
+        //                         }),
+        //                         cc.moveTo(1, cc.p(0, 0)), 
+        //                         cc.callFunc(function(){
+        //                             console.log("BBBBBB");
+        //                         }),
+        //                         cc.delayTime(1), 
+        //                         cc.moveTo(1, cc.p(-400, 0)));
+        //                         cc.callFunc(function(){
+        //                             console.log("CCCCCC");
+        //                         }),
+        // text.runAction(seq);
+        cc.tool.viewManager.changeView("kmView");
     },
 
     btnBack: function() {

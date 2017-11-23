@@ -16,23 +16,13 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        var anim = this.node.getComponent(cc.Animation);
         var self = this;
-        cc.loader.loadRes("ui/Click", cc.prefab,function(err, prefab){
-            console.log("load suceesss");
-        });
-        // this.node.on('touchstart', function (event) {
-        // }, this);
-
-        this.node.on('touchend', function(event){
-            console.log("touch end");
-            var pos = self.node.convertToNodeSpace(event.getLocation())
-            var prefab = cc.loader.getRes("ui/Click", cc.Prefab);
-            if(prefab){
-                let item = cc.instantiate(prefab);
-                item.setPosition(event.getLocationX() - 480, event.getLocationY() - 320);
-                self.node.addChild(item);
-            }
+        anim.on('finished', function(){
+            console.log("finished remove");
+            self.node.removeFromParent();
         }, this);
+        var animState = anim.play('sakura');
     },
 
     // called every frame, uncomment this function to activate update callback

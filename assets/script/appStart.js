@@ -136,8 +136,6 @@ cc.Class({
     },
 
     btnBack: function() {
-        var listview = new (require("RectContainer"))();
-        this.node.addChild(listview.node);
         cc.tool.viewManager.backPreview();
 
         // var test = new (require("array1"))()

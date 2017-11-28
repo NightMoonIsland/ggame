@@ -1,8 +1,8 @@
-
 var ZORDER_BG = 0;
 var ZORDER_ROOT = 1;
 var ZORDER_VIEW = 2;
 var ZORDER_BOX = 3;
+var ZORDER_TOP = 4;
 
 cc.Class({
     properties: {
@@ -23,14 +23,10 @@ cc.Class({
     },
 
     ctor: function() {
-        console.log("hhhehehe");
-        var array1 = require("array1");
-        this.viewList = new array1();
-        // this.array1 = new require("array1");
-        this.viewList.status();
-        this.viewList.pushBack({a:1, b:2});
-        this.viewList.status();
-        
+        this.viewList = new (require("array1"))();
+
+        let layer = new (require("topLayer"))();
+        cc.director.getScene().getChildByName("Canvas").addChild(layer.node, ZORDER_TOP);
     },
 
     setRoot: function(node) {

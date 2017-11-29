@@ -52,6 +52,10 @@ cc.Class({
 
     // },
 
+    onWorkAddBox: function(){
+        cc.tool.viewManager.addBox("ui/ceshiBox");
+    },
+
     onDestroy: function() {
         console.log("is Destory");
     }

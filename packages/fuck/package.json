@@ -1,12 +1,15 @@
 {
-  "name": "splspeco-love",
+  "name": "splspeco-tool",
   "version": "0.0.1",
   "description": "一份简单的扩展包",
   "author": "Cocos Creator",
   "main": "main.js",
   "main-menu": {
-    "蛤鉿/fuck": {
+    "迷之扩展/扩展测试": {
       "message": "splspeco-tool:say-hello"
+    },
+    "迷之扩展/测试2": {
+      "message": "splspeco-tool:open"
     }
   }
 }

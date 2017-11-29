@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Click",
+    "_name": "node",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -156,7 +156,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "820c6468-9cda-4bfe-b5aa-cde5b3c4659b"
+      "__uuid__": "c5741f9e-6230-4036-8e97-4fdcf3bcd98e"
     },
     "fileId": "79ca8kY2o9Ee5aqNEbEKgLy",
     "sync": false
@@ -247,7 +247,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "820c6468-9cda-4bfe-b5aa-cde5b3c4659b"
+      "__uuid__": "c5741f9e-6230-4036-8e97-4fdcf3bcd98e"
     },
     "fileId": "42151lQgg5EQqZCK5dsUPeO",
     "sync": false
@@ -271,7 +271,7 @@
     "playOnLoad": false
   },
   {
-    "__type__": "40947nOjAlGQqXnCOsYwC38",
+    "__type__": "2c1d46vuSZAWL630gqPAyzC",
     "_name": "",
     "_objFlags": 0,
     "node": {
@@ -285,7 +285,7 @@
       "__id__": 1
     },
     "asset": {
-      "__uuid__": "820c6468-9cda-4bfe-b5aa-cde5b3c4659b"
+      "__uuid__": "c5741f9e-6230-4036-8e97-4fdcf3bcd98e"
     },
     "fileId": "86fc4Y6rvZFQIXxnqWJI7rX",
     "sync": false

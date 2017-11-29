@@ -126,7 +126,8 @@ cc.Class({
         //                             console.log("CCCCCC");
         //                         }),
         // text.runAction(seq);
-        cc.tool.viewManager.changeView("kmView");
+        cc.tool.viewManager.changeView("homeView");
+        // cc.tool.viewManager.addBox("ui/ceshiBox");
     },
 
     btnBack: function() {

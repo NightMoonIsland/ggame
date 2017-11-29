@@ -146,8 +146,22 @@ cc.Class({
         return null;
     },
 
-    addBox: function(box, z = ZORDER_BOX){
-        // cc.director.getScene().
-        var box = new (require("testBox"))();
+    addBox: function(boxName){
+        var self = this;
+        if(this.box){
+            this.box.removeFromParent();
+            this.box.destroy();
+        }
+        cc.loader.loadRes(boxName, cc.Prefab, function(err, prefab){
+            var _box = cc.instantiate(prefab);
+            var box = _box.getChildByName("box");
+            if(box){
+                box.opacity = 0;
+                box.scale = 0.5;
+                box.runAction(cc.spawn(cc.fadeIn(0.2), cc.scaleTo(0.2, 1).easing(cc.easeBackOut())));
+                self.box = box;
+            }
+            cc.director.getScene().getChildByName("Canvas").addChild(_box, ZORDER_BOX);
+        });
     },
 });

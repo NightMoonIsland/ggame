@@ -13,7 +13,7 @@ cc.Class({
         this.node.anchorY = 0.5;
 
         var self = this;
-        cc.loader.loadRes("ui/Click", cc.prefab,function(err, prefab){
+        cc.loader.loadRes("ui/click", cc.prefab,function(err, prefab){
             console.log("load suceesss");
         });
 
@@ -31,7 +31,7 @@ cc.Class({
             onTouchEnded: function(touch, event){
                 console.log("touch end");
 
-                var prefab = cc.loader.getRes("ui/Click", cc.Prefab);
+                var prefab = cc.loader.getRes("ui/click", cc.Prefab);
                 if(prefab){
                     let item = cc.instantiate(prefab);
                     var pos = self.node.convertToNodeSpace(touch.getLocation());
@@ -54,7 +54,7 @@ cc.Class({
         //     self.setTouchSwallow(false);
         //     console.log("touch end");
         //     var pos = self.node.convertToNodeSpace(event.getLocation())
-        //     var prefab = cc.loader.getRes("ui/Click", cc.Prefab);
+        //     var prefab = cc.loader.getRes("ui/click", cc.Prefab);
         //     if(prefab){
         //         let item = cc.instantiate(prefab);
         //         // item.setPosition(event.getLocationX() - 480, event.getLocationY() - 320);

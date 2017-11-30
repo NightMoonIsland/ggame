@@ -27,6 +27,16 @@ cc.Class({
 
         let layer = new (require("topLayer"))();
         cc.director.getScene().getChildByName("Canvas").addChild(layer.node, ZORDER_TOP);
+
+        this.initRootLayer();
+    },
+
+    initRootLayer: function() {
+
+        cc.loader.loadRes("ui/rootLayer", cc.Prefab, function(err, prefab){
+            var root = cc.instantiate(prefab);
+            cc.director.getScene().getChildByName("Canvas").addChild(root, ZORDER_ROOT);
+        });
     },
 
     setRoot: function(node) {

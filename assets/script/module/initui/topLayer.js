@@ -29,14 +29,11 @@ cc.Class({
             //     self.listenerCallBack.setSwallowTouches(false);
             // },
             onTouchEnded: function(touch, event){
-                console.log("touch end");
-
                 var prefab = cc.loader.getRes("ui/click", cc.Prefab);
                 if(prefab){
                     let item = cc.instantiate(prefab);
                     var pos = self.node.convertToNodeSpace(touch.getLocation());
-                    item.setPosition(pos.x - 560, pos.y - 560);
-                    // cc.director.getScene().addChild(item, 5);
+                    item.setPosition(pos.x - self.node.width / 2, pos.y - self.node.height / 2);
                     self.node.addChild(item);
                 }
 

@@ -16,28 +16,14 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        this.globalTipWidget = new (require("globalTipWidget"))();
+        this.globalTipWidget.initPmdNode(this.node.getChildByName("toobar"));
     },
 
-    initPmdNode: function(node) {
-        this.node = node;
-        this.lenX = this.getRichText().width + 480;
-        this.getRichText().x = this.lenX;
+    btnBack: function() {
+        this.globalTipWidget.showNext();
+        cc.tool.viewManager.backPreview();
     },
-
-    showNext: function() {
-        console.log("show next");
-        var self = this;
-        this.getRichText().x = this.lenX;
-        var action = cc.sequence(cc.moveTo(3, 0, 0), cc.callFunc(function(){
-            console.log("wota fucnk");
-        }, self), cc.delayTime(2), cc.moveTo(3, -this.lenX, 0));
-        this.getRichText().runAction(action);
-    },
-
-    getRichText: function() {
-        return this.node.getChildByName("mask").getChildByName('richText');
-    }
 
     // called every frame, uncomment this function to activate update callback
     // update: function (dt) {

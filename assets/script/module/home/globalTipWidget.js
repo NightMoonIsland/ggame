@@ -16,7 +16,9 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-
+        var widget = this.node.getComponent(cc.Widget);
+        widget.target = cc.director.getScene().getChildByName("Canvas");
+        widget.updateAlignment();
     },
 
     initPmdNode: function(node) {

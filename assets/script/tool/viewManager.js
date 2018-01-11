@@ -25,10 +25,14 @@ cc.Class({
     ctor: function() {
         this.viewList = new (require("array1"))();
 
-        let layer = new (require("topLayer"))();
-        cc.director.getScene().getChildByName("Canvas").addChild(layer.node, ZORDER_TOP);
+        this.topLayer = new (require("topLayer"))();
+        cc.director.getScene().getChildByName("Canvas").addChild(this.topLayer.node, ZORDER_TOP);
 
         this.initRootLayer();
+    },
+
+    getTopLayer: function(){
+        return this.topLayer;
     },
 
     initRootLayer: function() {
@@ -42,19 +46,6 @@ cc.Class({
     setRoot: function(node) {
         this.root = node;
     },
-
-    // use this for initialization
-    onLoad: function () {
-        // console.log("hahahahha");
-
-        // cc.variable.viewInfo.asfdfsdf();
-        // console.log(typeof this.viewName);
-    },
-
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 
     init: function(){
         this.viewInfo = [];

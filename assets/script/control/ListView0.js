@@ -185,8 +185,4 @@ cc.Class({
         this.callback = callback;
     },
 
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 });

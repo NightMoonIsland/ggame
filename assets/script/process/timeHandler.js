@@ -14,7 +14,7 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        self: cc.Component, //用挂载在scene上的脚本作为计时器
+        timeHandlerNode: cc.Component, //用挂载在scene上的脚本作为计时器
     },
 
     // use this for initialization
@@ -23,24 +23,23 @@ cc.Class({
     },
 
     init: function(self) {
-        this.self = self;
+        this.timeHandlerNode = self;
     },
 
     updateTimer: function() {
         timerCount = timerCount + 1;
-        console.log("wo ca");
-        console.log("test Work = " + timerCount);
+        // console.log("pass time count = " + timerCount);
     },
 
     startTimer: function(){
         timerCount = 0;
-        this.self.schedule(this.updateTimer, 1);
+        this.timeHandlerNode.schedule(this.updateTimer, 1);
     },
 
     stopTimer: function(){
         timerCount = 0;
         console.log("停下!!");
-        this.self.unschedule(this.updateTimer);
+        this.timeHandlerNode.unschedule(this.updateTimer);
     },
 
     dosomething: function(){
@@ -48,8 +47,4 @@ cc.Class({
         // console.log("this.count = " + this.count);
         // this.count = this.count + 1;
     },
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
 });

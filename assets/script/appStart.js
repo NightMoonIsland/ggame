@@ -17,20 +17,7 @@ function init(self){
 
     cc.tool.timeHandler = new (require("timeHandler"))();
     cc.tool.timeHandler.init(self);
-
-    // var array = require("array1");
-    // var test = new array();
-
-    // var test = new (require("array1"))();
-
-    // for(var i = 10; i < 30; i++){
-    //     test.pushBack(i);
-    // }
-    // test.printInt();
-    // test.removeWithFunc(function(data){
-    //     return data < 20 && data > 15;
-    // });
-    // test.printInt();
+    cc.tool.timeHandler.startTimer();
 }
 
 cc.Class({
@@ -132,7 +119,9 @@ cc.Class({
 
     btnBack: function() {
         cc.tool.viewManager.backPreview();
-
+        if(cc.tool.viewManager.getTopLayer()){
+            console.log("exist !!!");
+        }
         // var test = new (require("array1"))()
         // for(var i = 0; i < 30; i++){
         //     var data = {};
@@ -162,18 +151,11 @@ cc.Class({
         // }
         // socket.emit('hehehaha', {abc:"wozhenderilegoule"});
 
-        var self = this;
-        cc.loader.loadRes("ui/ceshiBox", cc.prefab, function(err, prefab){
-            let box = cc.instantiate(prefab);
-            self.node.addChild(box);
-        });
-    },
-
-    startT: function(){
-        cc.tool.timeHandler.startTimer();
-    },
-
-    stopT: function(){
-        cc.tool.timeHandler.stopTimer();
+        // var self = this;
+        // cc.loader.loadRes("ui/ceshiBox", cc.prefab, function(err, prefab){
+        //     let box = cc.instantiate(prefab);
+        //     self.node.addChild(box);
+        // });
+        cc.tool.viewManager.addBox("ui/ceshiBox")
     },
 });

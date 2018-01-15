@@ -31,7 +31,7 @@ cc.Class({
         this.container.setHandler(self);
         this.container.setRectangle(width, height)
 
-        if(dir == cc.tool.config.Direction.VERTICAL){
+        if(dir == cc.ggame.config.Direction.VERTICAL){
             var self = this;
             this.getStartIdx = function(self){
                 if(self.dp == null || self.dp.getSize() == 0)
@@ -52,7 +52,7 @@ cc.Class({
                 return endIdx;
             }
         }
-        else if(dir == cc.tool.config.Direction.HORIZONTAL){
+        else if(dir == cc.ggame.config.Direction.HORIZONTAL){
             var self = this;
             this.getStartIdx = function(self){
                 if(self.dp == null || self.dp.getSize() == 0)
@@ -106,7 +106,7 @@ cc.Class({
         this.container.removeAllChildren();
 
         var num = Math.ceil(dp.getSize() / this.lines);
-        if(this.dir == cc.tool.config.Direction.VERTICAL)
+        if(this.dir == cc.ggame.config.Direction.VERTICAL)
             this.container.setInnerRectangle(this.itemWidth * this.lines + this.hgap * (this.lines - 1),
                             this.itemHeight * num + this.vgap * (num - 1));
         else
@@ -163,7 +163,7 @@ cc.Class({
         for(var i = startIdx - 1; i <= endIdx - 1; i++){
             //renderer = renderers[childIdx].getComponent('xxxRenderer');
 
-            if(this.dir == cc.tool.config.Direction.VERTICAL){
+            if(this.dir == cc.ggame.config.Direction.VERTICAL){
                 r = Math.floor(i / this.lines);
                 c = i % this.lines;
             }

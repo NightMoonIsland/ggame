@@ -1,7 +1,10 @@
+var MAX_TIP_NUM = 5;
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
+        tipTrashPool: null,
     },
 
     ctor: function () {
@@ -12,6 +15,8 @@ cc.Class({
         this.node.anchorX = 0.5;
         this.node.anchorY = 0.5;
 
+        this.swallowTouchEnabled = false
+
         //click anim
         var self = this;
         cc.loader.loadRes("ui/click", cc.prefab,function(err, prefab){
@@ -21,7 +26,7 @@ cc.Class({
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: function(touch, event){
                 console.log("touch began");
-                self.listenerCallBack.setSwallowTouches(false);
+                self.listenerCallBack.setSwallowTouches(self.swallowTouchEnabled);
                 return true;
             },
             // onTouchMoved: function(touch, event){
@@ -36,8 +41,7 @@ cc.Class({
                     item.setPosition(pos.x - self.node.width / 2, pos.y - self.node.height / 2);
                     self.node.addChild(item);
                 }
-
-                self.listenerCallBack.setSwallowTouches(false);
+                self.listenerCallBack.setSwallowTouches(self.swallowTouchEnabled);
             },
             // onTouchCancelled: function(touch, event){
             //     console.log("touch cancel");
@@ -47,11 +51,11 @@ cc.Class({
         this.listenerCallBack = cc.eventManager.addListener(listener, self.node)
 
         //tip anim
-        cc.loader.loadRes("ui/simpleTip", cc.prefab,function(err, prefab){
+        this.tipTrashPool = new (require("array1"))();
+        cc.loader.loadRes("ui/simpleTip", cc.prefab, function(err, prefab){
             console.log("load simpleTip suceesss");
         });
         this.tipNum = 0;
-
 
         // this.node.on('touchend', function(event){
         //     self.setTouchSwallow(false);
@@ -66,6 +70,25 @@ cc.Class({
         //         cc.director.getScene().addChild(item, 5);
         //     }
         // }, this);
+    },
+
+    generateTipNode: function() {
+        if(this.tipTrashPool.getSize() > 0){
+            for(var i = 0; i < this.tipTrashPool.getSize(); i++){
+                var tipNode = this.tipTrashPool.at(i);
+                tipNode.removeFromParent();
+            }
+            this.tipTrashPool.clear();
+        }
+
+        var prefab = cc.loader.getRes("ui/simpleTip", cc.Prefab);
+        if(prefab) {
+            let tipNode = cc.instantiate(prefab);
+            return tipNode;
+        }
+        else{
+            return null;
+        }
     },
 
     addTip: function(tip) {
@@ -86,12 +109,35 @@ cc.Class({
         //     end)
         // )
         // tipNode:runAction(actDisappear)
-        console.log("add tip worked !!!");
-        var prefab = cc.loader.getRes("ui/simpleTip", cc.Prefab);
-        this.tipNum = this.tipNum + 1;
-        if(prefab){
-            console.log("generate a new tip");
-            let tipNode = cc.instantiate(prefab);
+
+
+        // console.log("add tip worked !!!");
+        // var prefab = cc.loader.getRes("ui/simpleTip", cc.Prefab);
+        // this.tipNum = this.tipNum + 1;
+        // if(prefab){
+        //     console.log("generate a new tip");
+        //     let tipNode = cc.instantiate(prefab);
+        //     var label = tipNode.getChildByName("txt").getComponent(cc.Label);
+        //     label.string = tip;
+        //     tipNode.setPosition(0, (1 - this.tipNum) * 41 + 200);
+        //     this.node.addChild(tipNode);
+
+        //     var self = this;
+        //     var actDisappear = cc.sequence(
+        //         cc.delayTime(1.0),
+        //         cc.fadeOut(0.5),
+        //         cc.callFunc(function(){
+        //             console.log("fade out finished");
+        //             self.tipNum = self.tipNum - 1;
+        //             self.tipTrashPool.pushBack(tipNode);
+        //         }, tipNode)
+        //     )
+        //     tipNode.runAction(actDisappear);
+        // }
+
+        var tipNode = this.generateTipNode();
+        if(tipNode){
+            this.tipNum = this.tipNum + 1;
             var label = tipNode.getChildByName("txt").getComponent(cc.Label);
             label.string = tip;
             tipNode.setPosition(0, (1 - this.tipNum) * 41 + 200);
@@ -102,11 +148,20 @@ cc.Class({
                 cc.delayTime(1.0),
                 cc.fadeOut(0.5),
                 cc.callFunc(function(){
+                    console.log("fade out finished");
                     self.tipNum = self.tipNum - 1;
-                    tipNode.removeFromParent();
-                }, self)
+                    self.tipTrashPool.pushBack(tipNode);
+                }, tipNode)
             )
             tipNode.runAction(actDisappear);
         }
+    },
+
+    addBusyCount: function() {
+
+    },
+
+    removeBusyCount: function() {
+
     },
 });

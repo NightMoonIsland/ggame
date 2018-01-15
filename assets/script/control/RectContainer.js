@@ -121,7 +121,7 @@ cc.Class({
             scheduler.unscheduleUpdate(self);
         }
 
-        if(this.moveDir == cc.tool.config.Direction.VERTICAL){
+        if(this.moveDir == cc.ggame.config.Direction.VERTICAL){
             this.moveBy(0, this.moveSpeed);
             if((this.cy >= this.innerHeight - this.node.height) ||
                 this.cy <= 0)

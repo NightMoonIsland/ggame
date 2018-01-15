@@ -53,7 +53,7 @@ cc.Class({
     // },
 
     onWorkAddBox: function(){
-        cc.tool.viewManager.addBox("ui/ceshiBox");
+        cc.ggame.viewManager.addBox("ui/ceshiBox");
     },
 
     onDestroy: function() {

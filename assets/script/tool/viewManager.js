@@ -6,16 +6,6 @@ var ZORDER_TOP = 4;
 
 cc.Class({
     properties: {
-        // foo: {
-        //    default: null,      // The default value will be used only when the component attaching
-        //                           to a node for the first time
-        //    url: cc.Texture2D,  // optional, default is typeof default
-        //    serializable: true, // optional, default is true
-        //    visible: true,      // optional, default is true
-        //    displayName: 'Foo', // optional
-        //    readonly: false,    // optional, default is false
-        // },
-        // ...
         viewList: null,
         viewInfo: [],
         view: null,
@@ -93,8 +83,8 @@ cc.Class({
     curView: function() {
         // this.testAddChild();
         var self = this;
-        cc.tool.eventManager.addEventListener("hahaha", self, self.testAddChild);
-        cc.tool.eventManager.testWorkListener()
+        cc.ggame.eventManager.addEventListener("hahaha", self, self.testAddChild);
+        cc.ggame.eventManager.testWorkListener()
         this.view.removeFromParent(false);
         cc.loader.releaseRes("prefab/Test1Panel");
 

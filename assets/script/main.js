@@ -1,23 +1,23 @@
-function init(self){
-    cc.tool = {}
+function initGame(self){
+    cc.ggame = {}
 
-    cc.tool.viewManager = new (require("viewManager"))();
-    cc.tool.viewManager.init();
+    cc.ggame.viewManager = new (require("viewManager"))();
+    cc.ggame.viewManager.init();
     require("viewRegister")();
 
-    cc.tool.eventManager = new (require("eventManager"))();
+    cc.ggame.eventManager = new (require("eventManager"))();
 
-    cc.tool.gameVariable = require("gameVariable");
-    cc.tool.Lang = require("langZh");
+    cc.ggame.gameVariable = require("gameVariable");
+    cc.ggame.Lang = require("langZh");
 
-    cc.tool.config = require("config");
+    cc.ggame.config = require("config");
 
-    cc.tool.protocolInit = require("protocolInit");
-    cc.tool.protocolHandler = require("protocolHandler");
+    cc.ggame.protocolInit = require("protocolInit");
+    cc.ggame.protocolHandler = require("protocolHandler");
 
-    cc.tool.timeHandler = new (require("timeHandler"))();
-    cc.tool.timeHandler.init(self);
-    cc.tool.timeHandler.startTimer();
+    cc.ggame.timeHandler = new (require("timeHandler"))();
+    cc.ggame.timeHandler.init(self);
+    cc.ggame.timeHandler.startTimer();
 }
 
 cc.Class({
@@ -41,7 +41,7 @@ cc.Class({
     // use this for initialization
     onLoad: function () {
         var self = this;
-        init(self);
+        initGame(self);
 
         this.node.on('touchstart', function (event) {
             console.log('反对舒服的沙发上');
@@ -49,13 +49,13 @@ cc.Class({
 
         // var self = this;
         // cc.loader.loadRes("control/ListView", cc.Prefab, function(err, prefab){
-        //     // cc.tool.prefab.listView = prefab;
+        //     // cc.ggame.prefab.listView = prefab;
         //     console.log("type prefab = " + typeof prefab)
 
         //     var root = cc.instantiate(prefab);
         //     root.setPosition(cc.v2(0, 0));
         //     let listView = root.getChildByName("view").getChildByName("content").getComponent("ListView");
-        //     listView.create(cc.tool.config.Direction.HORIZONTAL, 1, 1, 1, 240, 150);
+        //     listView.create(cc.ggame.config.Direction.HORIZONTAL, 1, 1, 1, 240, 150);
         //     listView.setItemModel("control/Renderer", 160, 60);
 
         //     var array = require("array1");
@@ -79,8 +79,8 @@ cc.Class({
     updateTime: function() {
         console.log("this.count = " + this.count);
         this.count = this.count + 1;
-        // cc.tool.eventManager.VAR_CHANGE("sec1");
-        cc.tool.gameVariable.sec = cc.tool.gameVariable.sec + 1;
+        // cc.ggame.eventManager.VAR_CHANGE("sec1");
+        cc.ggame.gameVariable.sec = cc.ggame.gameVariable.sec + 1;
     },
 
     testFunc: function() {
@@ -92,9 +92,7 @@ cc.Class({
     },
 
     initScene: function() {
-        // cc.tool.viewManager.setRoot(this.node);
-        // cc.tool.viewManager.changeView("hahhahahaa");
-        console.log("test type" + typeof this.haha["wocao"]);
+
     },
 
     testRemove: function() {
@@ -113,13 +111,13 @@ cc.Class({
         //                             console.log("CCCCCC");
         //                         }),
         // text.runAction(seq);
-        cc.tool.viewManager.changeView("homeView");
-        // cc.tool.viewManager.addBox("ui/ceshiBox");
+        cc.ggame.viewManager.changeView("homeView");
+        // cc.ggame.viewManager.addBox("ui/ceshiBox");
     },
 
     btnBack: function() {
-        cc.tool.viewManager.backPreview();
-        if(cc.tool.viewManager.getTopLayer()){
+        cc.ggame.viewManager.backPreview();
+        if(cc.ggame.viewManager.getTopLayer()){
             console.log("exist !!!");
         }
         // var test = new (require("array1"))()
@@ -130,7 +128,7 @@ cc.Class({
         // }
 
         // var listview = new (require("ListView0"))();
-        // listview.create(cc.tool.config.Direction.VERTICAL, 2, 2, 2, 205, 222);
+        // listview.create(cc.ggame.config.Direction.VERTICAL, 2, 2, 2, 205, 222);
         // listview.setItemModel("ui/xxxRenderer", 100, 20);
         // listview.setDataProvider(test);
         // listview.addTo(this.node);
@@ -143,19 +141,19 @@ cc.Class({
 
     connectTest: function() {
         // console.log("work connect");
-        // var socket = io.connect('10.10.30.234:12345', function(msg){
-        //     console.log(msg);
-        // });
-        // for(var i = 0; i < cc.tool.protocolInit.tmRes.length; i++){
-        //     socket.on(cc.tool.protocolInit.tmRes[i], cc.tool.protocolHandler[cc.tool.protocolInit.tmRes[i]]);
-        // }
-        // socket.emit('hehehaha', {abc:"wozhenderilegoule"});
+        var socket = io.connect('10.10.30.234:9876', function(msg){
+            console.log(msg);
+        });
+        for(var i = 0; i < cc.ggame.protocolInit.tmRes.length; i++){
+            socket.on(cc.ggame.protocolInit.tmRes[i], cc.ggame.protocolHandler[cc.ggame.protocolInit.tmRes[i]]);
+        }
+        socket.emit('hehehaha', {abc:"wozhenderilegoule"});
 
         // var self = this;
         // cc.loader.loadRes("ui/ceshiBox", cc.prefab, function(err, prefab){
         //     let box = cc.instantiate(prefab);
         //     self.node.addChild(box);
         // });
-        cc.tool.viewManager.addBox("ui/ceshiBox")
+        // cc.ggame.viewManager.addBox("ui/ceshiBox")
     },
 });

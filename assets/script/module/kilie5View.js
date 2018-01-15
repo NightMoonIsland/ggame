@@ -20,7 +20,7 @@ cc.Class({
     },
 
     btnHome: function() {
-        cc.tool.viewManager.changeView("HomeView");
+        cc.ggame.viewManager.changeView("HomeView");
     }
 
     // called every frame, uncomment this function to activate update callback

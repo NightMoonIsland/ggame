@@ -16,17 +16,14 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        cc.log("creating");
         this.globalTipWidget = new (require("globalTipWidget"))();
-        cc.log("created");
         this.globalTipWidget.initPmdNode(this.node.getChildByName("toobar"));
-        cc.log("inited");
     },
 
     btnBack: function() {
         this.globalTipWidget.showNext();
-        // cc.tool.viewManager.backPreview();
-        cc.tool.viewManager.getTopLayer().addTip("addTip");
+        // cc.ggame.viewManager.backPreview();
+        cc.ggame.viewManager.getTopLayer().addTip("addTip");
     },
 
     // called every frame, uncomment this function to activate update callback

@@ -32,8 +32,6 @@ cc.Class({
     },
 
     addEventListener: function(eventType, target, func) {
-        target.output();
-        // console.log()
         if(!target || !func) return;
         if(!this.eventListener[eventType]){
             this.eventListener[eventType] = new array1();

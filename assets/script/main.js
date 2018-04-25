@@ -18,7 +18,6 @@ cc.Class({
     updateTime: function() {
         console.log("this.count = " + this.count);
         this.count = this.count + 1;
-        // cc.ggame.eventManager.VAR_CHANGE("sec1");
         cc.ggame.gameVariable.sec = cc.ggame.gameVariable.sec + 1;
     },
 

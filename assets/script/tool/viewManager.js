@@ -36,10 +36,6 @@ cc.Class({
         this.root = node;
     },
 
-    init: function(){
-        this.viewInfo = [];
-    },
-
     registView: function(viewName, module, title){
         this.viewInfo[viewName] = {viewName:viewName, module:module, title:title};
     },

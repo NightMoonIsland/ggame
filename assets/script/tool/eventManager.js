@@ -1,9 +1,4 @@
-var array1 = require("array1")
-var test = require("test")
-
 cc.Class({
-    extends: test,
-
     properties: {
         // foo: {
         //    default: null,      // The default value will be used only when the component attaching
@@ -24,7 +19,6 @@ cc.Class({
     },
 
     init: function() {
-        this.super.testWork();
     },
 
     testWork: function() {

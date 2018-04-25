@@ -26,7 +26,6 @@ cc.Class({
     },
 
     initRootLayer: function() {
-
         cc.loader.loadRes("ui/rootLayer", cc.Prefab, function(err, prefab){
             var root = cc.instantiate(prefab);
             cc.director.getScene().getChildByName("Canvas").addChild(root, ZORDER_ROOT);

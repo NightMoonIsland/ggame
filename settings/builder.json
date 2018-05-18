@@ -1,14 +1,14 @@
 {
   "appKey": "",
   "appSecret": "",
+  "encryptJs": true,
   "excludeScenes": [],
   "includeAnySDK": false,
   "includeSDKBox": false,
-  "includeSdk": [
-    "anysdk"
-  ],
   "inlineSpriteFrames": true,
   "inlineSpriteFrames_native": true,
+  "jailbreakPlatform": false,
+  "md5Cache": false,
   "mergeStartScene": false,
   "oauthLoginServer": "",
   "optimizeHotUpdate": false,
@@ -21,7 +21,13 @@
   "packageName": "org.cocos2d.ggame",
   "privateKey": "",
   "renderMode": "0",
-  "startScene": "d6a5cccd-05b5-4c2d-9a62-5dd08cbda5b1",
+  "startScene": "c0d3c332-72b7-4b1f-9d6c-83ca4c2d69f3",
   "title": "ggame",
-  "webOrientation": "auto"
+  "webOrientation": "auto",
+  "wechatgame": {
+    "appid": "wx6ac3f5090a6b99c5",
+    "orientation": "portrait"
+  },
+  "xxteaKey": "767ca945-bd0b-45",
+  "zipCompressJs": true
 }

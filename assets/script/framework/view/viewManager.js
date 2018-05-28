@@ -16,7 +16,7 @@ cc.Class({
         this.viewList = new (require("array1"))();
 
         this.topLayer = new (require("topLayer"))();
-        cc.director.getScene().getChildByName("Canvas").addChild(this.topLayer.node, ZORDER_TOP);
+        cc.game.globalHandler.getCanvas().addChild(this.topLayer.node, ZORDER_TOP);
 
         this.initRootLayer();
     },
@@ -28,7 +28,7 @@ cc.Class({
     initRootLayer: function() {
         cc.loader.loadRes("ui/rootLayer", cc.Prefab, function(err, prefab){
             var root = cc.instantiate(prefab);
-            cc.director.getScene().getChildByName("Canvas").addChild(root, ZORDER_ROOT);
+            cc.game.globalHandler.getCanvas().addChild(root, ZORDER_ROOT);
         });
     },
 
@@ -62,7 +62,7 @@ cc.Class({
         //通过链接 加载的资源 必须放在resource下
         cc.loader.loadRes(viewAbout.module, function(err, prefab){
             var root = cc.instantiate(prefab);
-            cc.director.getScene().getChildByName("Canvas").addChild(root);
+            cc.game.globalHandler.getCanvas().addChild(root);
             if(self.view != null){
                 self.view.removeFromParent();
                 self.view.destroy();
@@ -118,7 +118,7 @@ cc.Class({
             var self = this;
             cc.loader.loadRes(viewAbout.module, function(err, prefab){
                 var root = cc.instantiate(prefab);
-                cc.director.getScene().getChildByName("Canvas").addChild(root);
+                cc.game.globalHandler.getCanvas().addChild(root);
                 if(self.view != null){
                     self.view.removeFromParent();
                     self.view.destroy();
@@ -147,7 +147,7 @@ cc.Class({
                 box.runAction(cc.spawn(cc.fadeIn(0.2), cc.scaleTo(0.2, 1).easing(cc.easeBackOut())));
                 self.box = box;
             }
-            cc.director.getScene().getChildByName("Canvas").addChild(_box, ZORDER_BOX);
+            cc.game.globalHandler.getCanvas().addChild(_box, ZORDER_BOX);
         });
     },
 });

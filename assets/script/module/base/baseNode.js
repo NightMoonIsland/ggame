@@ -4,6 +4,10 @@ cc.Class({
 
     },
 
+    initNode() {
+        
+    },
+
     onLoad() {
         var self = this;
         this.node.on('touchstart', function(event){

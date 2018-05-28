@@ -1,9 +1,7 @@
 module.exports = function(gameObject) {
     cc.ggame = {}
 
-    cc.game.getScene = function() {
-        return cc.director.getScene();
-    }
+    cc.game.globalHandler = require("globalHandler");
 
     cc.ggame.viewManager = new (require("viewManager"))();
     require("viewRegister")();

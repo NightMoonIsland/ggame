@@ -1,11 +1,8 @@
 cc.Class({
     extends: cc.Component,
-    properties: {
-
-    },
 
     initNode() {
-        
+
     },
 
     onLoad() {

@@ -2,8 +2,6 @@ var baseNode = require("baseNode");
 
 cc.Class({
     extends: baseNode,
-    properties: {
-    },
 
     initView() {
         console.log("init View");

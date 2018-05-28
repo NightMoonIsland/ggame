@@ -1,6 +1,0 @@
-cc.Class({
-    properties: {
-    },
-
-    
-});

@@ -10,6 +10,8 @@ cc.Class({
 
         console.log(cc.ggame.Lang["ITEM_VALUE"]);
 
+        cc.ggame.viewManager.changeView("homeView");
+
         this.node.on('touchstart', function (event) {
             console.log('反对舒服的沙发上');
         }, this);
@@ -34,7 +36,7 @@ cc.Class({
     },
 
     testRemove: function() {
-        cc.ggame.viewManager.changeView("homeView");
+        
     },
 
     btnBack: function() {

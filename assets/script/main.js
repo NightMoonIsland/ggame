@@ -6,7 +6,9 @@ cc.Class({
     },
 
     onLoad: function () {
+        (require("initFramework"))();
         (require("initGame"))(this);
+
 
         console.log(cc.ggame.Lang["ITEM_VALUE"]);
 
@@ -44,28 +46,5 @@ cc.Class({
         if(cc.ggame.viewManager.getTopLayer()){
             console.log("exist !!!");
         }
-    },
-
-    // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
-
-    connectTest: function() {
-        // console.log("work connect");
-        var socket = io.connect('10.10.30.234:9876', function(msg){
-            console.log(msg);
-        });
-        for(var i = 0; i < cc.ggame.protocolInit.tmRes.length; i++){
-            socket.on(cc.ggame.protocolInit.tmRes[i], cc.ggame.protocolHandler[cc.ggame.protocolInit.tmRes[i]]);
-        }
-        socket.emit('hehehaha', {abc:"wozhenderilegoule"});
-
-        // var self = this;
-        // cc.loader.loadRes("ui/ceshiBox", cc.prefab, function(err, prefab){
-        //     let box = cc.instantiate(prefab);
-        //     self.node.addChild(box);
-        // });
-        // cc.ggame.viewManager.addBox("ui/ceshiBox")
     },
 });

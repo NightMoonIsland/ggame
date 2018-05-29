@@ -59,7 +59,6 @@ cc.Class({
         console.log("wocao 3");
 
         var self = this;
-        //通过链接 加载的资源 必须放在resource下
         cc.loader.loadRes(viewAbout.module, function(err, prefab){
             var root = cc.instantiate(prefab);
             cc.game.globalHandler.getCanvas().addChild(root);
@@ -76,7 +75,6 @@ cc.Class({
     },
 
     curView: function() {
-        // this.testAddChild();
         var self = this;
         cc.ggame.eventManager.addEventListener("hahaha", self, self.testAddChild);
         cc.ggame.eventManager.testWorkListener()

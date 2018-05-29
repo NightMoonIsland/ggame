@@ -82,7 +82,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 3
@@ -363,12 +363,6 @@
     },
     "duration": 0.1,
     "zoomScale": 1.2,
-    "pressedSprite": {
-      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
-    },
-    "hoverSprite": {
-      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
-    },
     "clickEvents": [
       {
         "__id__": 11
@@ -391,6 +385,18 @@
       "a": 255
     },
     "_N$normalSprite": {
+      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
+    },
+    "_N$pressedSprite": {
+      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
+    },
+    "pressedSprite": {
+      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
+    },
+    "_N$hoverSprite": {
+      "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
+    },
+    "hoverSprite": {
       "__uuid__": "9b462679-d299-4eb5-86e0-136cae113f1a"
     },
     "_N$disabledSprite": null,
@@ -602,7 +608,8 @@
     "_N$font": null,
     "_N$maxWidth": 0,
     "_N$lineHeight": 30,
-    "_N$imageAtlas": null
+    "_N$imageAtlas": null,
+    "_N$handleTouchEvent": true
   },
   {
     "__type__": "cc.PrefabInfo",

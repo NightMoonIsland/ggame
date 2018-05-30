@@ -12,7 +12,7 @@ cc.Class({
             if(child) {
                 var widget = child.getComponent(cc.Widget);
                 if(widget != null) {
-                    widget.target = cc.game.globalHandler.getCanvas();
+                    widget.target = cc.ggame.globalHandler.getCanvas();
                 }
             }
         }

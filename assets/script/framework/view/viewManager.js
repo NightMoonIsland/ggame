@@ -16,7 +16,7 @@ cc.Class({
         this.viewList = new (require("array1"))();
 
         this.topLayer = new (require("topLayer"))();
-        cc.game.globalHandler.getCanvas().addChild(this.topLayer.node, ZORDER_TOP);
+        cc.ggame.globalHandler.getCanvas().addChild(this.topLayer.node, ZORDER_TOP);
 
         this.initRootLayer();
     },
@@ -28,7 +28,7 @@ cc.Class({
     initRootLayer: function() {
         cc.loader.loadRes("ui/rootLayer", cc.Prefab, function(err, prefab){
             var root = cc.instantiate(prefab);
-            cc.game.globalHandler.getCanvas().addChild(root, ZORDER_ROOT);
+            cc.ggame.globalHandler.getCanvas().addChild(root, ZORDER_ROOT);
         });
     },
 
@@ -61,7 +61,7 @@ cc.Class({
         var self = this;
         cc.loader.loadRes(viewAbout.module, function(err, prefab){
             var root = cc.instantiate(prefab);
-            cc.game.globalHandler.getCanvas().addChild(root);
+            cc.ggame.globalHandler.getCanvas().addChild(root);
             if(self.view != null){
                 self.view.removeFromParent();
                 self.view.destroy();
@@ -116,7 +116,7 @@ cc.Class({
             var self = this;
             cc.loader.loadRes(viewAbout.module, function(err, prefab){
                 var root = cc.instantiate(prefab);
-                cc.game.globalHandler.getCanvas().addChild(root);
+                cc.ggame.globalHandler.getCanvas().addChild(root);
                 if(self.view != null){
                     self.view.removeFromParent();
                     self.view.destroy();
@@ -145,7 +145,7 @@ cc.Class({
                 box.runAction(cc.spawn(cc.fadeIn(0.2), cc.scaleTo(0.2, 1).easing(cc.easeBackOut())));
                 self.box = box;
             }
-            cc.game.globalHandler.getCanvas().addChild(_box, ZORDER_BOX);
+            cc.ggame.globalHandler.getCanvas().addChild(_box, ZORDER_BOX);
         });
     },
 });

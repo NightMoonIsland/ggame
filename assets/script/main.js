@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 cc.Class({
     extends: cc.Component,
 
@@ -7,8 +9,17 @@ cc.Class({
 
         var prefab = cc.ggame.resManager.getPrefab("homeView");
 
+        var funcTest = function() {
+            console.log("wait B 2")
+        }
+
+        if(fs.statSync("ui").isDirectory()) {
+            
+        }
+
         cc.ggame.resManager.getPrefab("homeView", function(err, prefab){
-            console.log("wait B");
+            console.log("wait B 1");
+            funcTest();
         });
         console.log("wait C");
         // cc.ggame.viewManager.changeView("homeView");

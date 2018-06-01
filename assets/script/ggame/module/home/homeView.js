@@ -5,12 +5,7 @@ cc.Class({
     properties: {
     },
 
-    ctor: function() {
-        console.log("ctor finished");  
-    },
-
     onLoad: function () {
-        console.log("onload start");
         this.initView();
     },
 
@@ -19,7 +14,6 @@ cc.Class({
         var cbname = event.getCurrentTarget().name;
         var tagName = customEventData;
         if(tagName == ""){
-
         }
         else if(tagName == "") {
 

@@ -34,8 +34,8 @@ cc.Class({
 
     btnBack: function() {
         cc.ggame.viewManager.backPreview();
-        if(cc.ggame.viewManager.getTopLayer()){
-            console.log("exist !!!");
-        }
+        // if(cc.ggame.viewManager.getTopLayer()){
+        //     console.log("exist !!!");
+        // }
     },
 });

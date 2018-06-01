@@ -17,9 +17,4 @@ cc.Class({
             }
         }
     },
-
-    onLoad() {
-        console.log("baseView");
-        this._super();
-    },
 });

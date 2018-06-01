@@ -1,9 +1,6 @@
 cc.Class({
     extends: cc.Component,
 
-    initNode() {
-
-    },
 
     onLoad() {
         var self = this;
@@ -24,5 +21,6 @@ cc.Class({
         }, this);
 
         console.log("baseNode");
+        this.initNode();
     },
 });

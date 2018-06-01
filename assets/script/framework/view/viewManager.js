@@ -40,7 +40,7 @@ cc.Class({
         this.viewInfo[viewName] = {viewName:viewName, module:module, title:title};
     },
 
-    changeView: function(viewName){
+    changeView: function(viewName, func){
         if(!this.viewList.empty() && this.viewList.back() == viewName){
             console.log("view is same");
             return this.view;
@@ -70,7 +70,9 @@ cc.Class({
             self.view = root;
         });
         
-        this.viewName = viewName;
+        if(func) {
+            func();
+        }
         return this.view;
     },
 

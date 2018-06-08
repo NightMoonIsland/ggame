@@ -15,14 +15,7 @@ cc.Class({
     ctor: function() {
         this.viewList = new (require("array1"))();
 
-        this.topLayer = new (require("topLayer"))();
-        cc.ggame.globalHandler.getCanvas().addChild(this.topLayer.node, ZORDER_TOP);
-
-        this.initRootLayer();
-    },
-
-    getTopLayer: function(){
-        return this.topLayer;
+        // this.initRootLayer();
     },
 
     initRootLayer: function() {

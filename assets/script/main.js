@@ -1,5 +1,3 @@
-var fs = require("fs");
-
 cc.Class({
     extends: cc.Component,
 
@@ -7,17 +5,19 @@ cc.Class({
         (require("initFramework"))();
         (require("initGame"))(this);
 
-        var prefab = cc.ggame.resManager.getPrefab("homeView");
+        this.initMainScene();
 
-        var funcTest = function() {
-            console.log("wait B 2")
-        }
+        // var prefab = cc.ggame.resManager.getPrefab("homeView");
 
-        cc.ggame.resManager.getPrefab("homeView", function(err, prefab){
-            console.log("wait B 1");
-            funcTest();
-        });
-        console.log("wait C");
+        // var funcTest = function() {
+        //     console.log("wait B 2")
+        // }
+
+        // cc.ggame.resManager.getPrefab("homeView", function(err, prefab){
+        //     console.log("wait B 1");
+        //     funcTest();
+        // });
+        // console.log("wait C");
 
         // if(fs.statSync("ui").isDirectory()) {
         //     console.log("xxyyzz isDirec");
@@ -37,5 +37,14 @@ cc.Class({
         // if(cc.ggame.viewManager.getTopLayer()){
         //     console.log("exist !!!");
         // }
+    },
+
+    initMainScene: function() {
+        this.topLayer = new (require("topLayer"))();
+        cc.ggame.globalHandler.getCanvas().addChild(this.topLayer.node, cc.ggame.config.ZOrder.TOP);
+    },
+
+    testCode: function() {
+
     },
 });

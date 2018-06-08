@@ -18,10 +18,25 @@ cc.Class({
         this.swallowTouchEnabled = false
 
         //click anim
-        var self = this;
+        this.newFunction();
+
+        
+
         cc.loader.loadRes("ui/click", cc.prefab,function(err, prefab){
             console.log("load click suceesss");
         });
+        
+
+        //tip anim
+        this.tipTrashPool = new (require("array1"))();
+        cc.loader.loadRes("ui/simpleTip", cc.prefab, function(err, prefab){
+            console.log("load simpleTip suceesss");
+        });
+        this.tipNum = 0;
+    },
+
+    oldFunction: function() {
+        var self = this;
         var listener = {
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
             onTouchBegan: function(touch, event){
@@ -48,14 +63,44 @@ cc.Class({
             //     self.listenerCallBack.setSwallowTouches(false);
             // },
         }
-        this.listenerCallBack = cc.eventManager.addListener(listener, self.node)
+        self.listenerCallBack = cc.eventManager.addListener(listener, self.node)
+    },
 
-        //tip anim
-        this.tipTrashPool = new (require("array1"))();
-        cc.loader.loadRes("ui/simpleTip", cc.prefab, function(err, prefab){
-            console.log("load simpleTip suceesss");
-        });
-        this.tipNum = 0;
+    newFunction: function() {
+        // var listener = cc.EventListener.create({
+        //     event: cc.EventListener.TOUCH_ONE_BY_ONE,
+        //     onKeyPressed: function (keyCode, event) {
+        //         cc.log('pressed key: ' + keyCode);
+        //     },
+        //     onKeyReleased: function (keyCode, event) {
+        //         cc.log('released key: ' + keyCode);
+        //     }
+        // });
+
+        // console.log("new A");
+        // var listener = new EventListeners();
+        // listener.add(cc.Node.EventType.TOUCH_END, function(event){
+        //     console.log("touch ended");
+        // });
+        // console.log("new B");
+        // this.node._addEventFlag(cc.Node.EventType.TOUCH_END, listener);
+        // console.log("new C");
+
+        // this.node._addEventFlag(cc.EventListener.TOUCH_ONE_BY_ONE, listener);
+
+        // this.node.setSwallowTouches(false);
+        // this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
+        //     // var endEvent = new cc.Event.EventTouch(event.getTouches(), event.bubbles);
+        //     // endEvent.type = cc.Node.EventType.TOUCH_END;
+        //     // endEvent.touch = event.touch;
+        //     // endEvent.simulate = true;
+        //     // cc.ggame.globalHandler.getCanvas().dispatchEvent(endEvent);
+        //     cc.log("this is callback");
+        // }, this);
+        // console.log("touchEnd = ", touchEnd);
+        // console.log("can gogo1");
+        // touchEnd.setSwallowTouches(this.swallowTouchEnabled);
+        // console.log("can gogo2");
     },
 
     generateTipNode: function() {

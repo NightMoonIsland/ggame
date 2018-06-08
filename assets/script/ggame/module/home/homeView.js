@@ -13,7 +13,8 @@ cc.Class({
         console.log("");
         var cbname = event.getCurrentTarget().name;
         var tagName = customEventData;
-        if(tagName == ""){
+        if(tagName == "test"){
+            console.log("clicked")
         }
         else if(tagName == "") {
 

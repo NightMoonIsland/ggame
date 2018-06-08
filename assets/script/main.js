@@ -27,7 +27,7 @@ cc.Class({
         // }
         cc.ggame.viewManager.changeView("homeView");
 
-        this.node.on('touchstart', function (event) {
+        this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
             console.log('反对舒服的沙发上');
         }, this);
     },

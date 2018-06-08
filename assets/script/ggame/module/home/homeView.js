@@ -11,6 +11,7 @@ cc.Class({
 
     onClickEvent: function(event, customEventData){
         console.log("");
+        console.log(event.type);
         var cbname = event.getCurrentTarget().name;
         var tagName = customEventData;
         if(tagName == "test"){

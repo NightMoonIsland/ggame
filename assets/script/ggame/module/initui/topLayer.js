@@ -89,14 +89,29 @@ cc.Class({
         // this.node._addEventFlag(cc.EventListener.TOUCH_ONE_BY_ONE, listener);
 
         // this.node.setSwallowTouches(false);
-        // this.node.on(cc.Node.EventType.TOUCH_START, function (event) {
-        //     // var endEvent = new cc.Event.EventTouch(event.getTouches(), event.bubbles);
-        //     // endEvent.type = cc.Node.EventType.TOUCH_END;
-        //     // endEvent.touch = event.touch;
-        //     // endEvent.simulate = true;
-        //     // cc.ggame.globalHandler.getCanvas().dispatchEvent(endEvent);
-        //     cc.log("this is callback");
-        // }, this);
+        var self = this;
+        this.node.on("touchend", function (event) {
+            var prefab = cc.loader.getRes("ui/click", cc.Prefab);
+            if(prefab){
+                let item = cc.instantiate(prefab);
+                var pos = self.node.convertToNodeSpace(event.touch.getLocation());
+                item.setPosition(pos.x - self.node.width / 2, pos.y - self.node.height / 2);
+                self.node.addChild(item);
+            }
+
+            var endEvent = new cc.Event.EventTouch(event.getTouches(), event.bubbles);
+            endEvent.type = "touchend";
+            endEvent.touch = event.touch;
+            endEvent.simulate = true;
+            var view = cc.ggame.globalHandler.getCanvas().getChildByName("view");
+            if(view) {
+                console.log(view.childrenCount);
+                view.dispatchEvent(endEvent);
+            }
+            // cc.ggame.globalHandler.getCanvas().dispatchEvent(endEvent);
+            cc.log("this is callback");
+        }, this.node);
+
         // console.log("touchEnd = ", touchEnd);
         // console.log("can gogo1");
         // touchEnd.setSwallowTouches(this.swallowTouchEnabled);

@@ -106,7 +106,7 @@ cc.Class({
             var view = cc.ggame.globalHandler.getCanvas().getChildByName("view");
             if(view) {
                 console.log(view.childrenCount);
-                view.dispatchEvent(endEvent);
+                view.getComponent("homeView").dispatchEvent(endEvent);
             }
             // cc.ggame.globalHandler.getCanvas().dispatchEvent(endEvent);
             cc.log("this is callback");

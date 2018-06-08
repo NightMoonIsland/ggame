@@ -17,4 +17,23 @@ cc.Class({
             }
         }
     },
+
+    dispatchEvent(event) {
+        this.dispatchEventToAll(this.node, event, 0);
+    },
+
+    dispatchEventToAll(node, event, ceng) {
+        if(!node){ 
+            return;
+        }
+        else{
+            var str = "";
+            for(var i=0; i < ceng; i++) str = str + " ";
+            console.log("node name = " + str, node.name);
+            node.dispatchEvent(event);
+        }
+        for(var i = 0; i < node.childrenCount; i++) {
+            this.dispatchEventToAll(node.children[i], event, ceng + 1);
+        }
+    }
 });
